@@ -82,7 +82,7 @@ function RecetaSimple (ojo, esfOjo1, cilOjo1, ejeOjo1) {
 }
 
 //Constructor receta para ambos ojos
-function RecetaDoble (ojo1, esfOjo1, cilOjo1, ejeOjo1, ojo2, esfOjo2, cilOjo2, ejeOjo2){
+function RecetaOriginal (ojo1, esfOjo1, cilOjo1, ejeOjo1, ojo2, esfOjo2, cilOjo2, ejeOjo2){
     this.ojo1 = ojo1;
     this.esfOjo1 = esfOjo1;
     this.cilOjo1 = cilOjo1;
