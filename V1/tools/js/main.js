@@ -97,6 +97,14 @@ ingresoDatosReceta();
 //Creo nuevo objeto Receta con las graduaciones originales
 const recetaOriginal = new Receta ("OD", esfOjo1, cilOjo1, ejeOjo1, "OI", esfOjo2, cilOjo2, ejeOjo2);
 
+
+//Funcion para redondear a cuartos
+const redondearACuartos = (num) =>{
+    num *= 4;
+    num = Math.round(num)/4;
+    return num;
+}
+
 /*Función para calcular distometria
 Se calcula distometría entera según la formula DC = D / (1-xD)
 DC = Receta adaptada a Lentes de Contacto
@@ -105,27 +113,27 @@ x = Distancia al vértice (en metros)
 */
 const distometria = () => {
     if (ojoACalcular == "od" || ojoACalcular == "ao") {
-        esfOjo1Adaptado = 
+        esfOjo1Adaptado = redondearACuartos( 
             Math.round((
             parseFloat(esfOjo1/100) / (1-((parseFloat(distanciaVertice)/1000)*parseFloat(esfOjo1/100)))
-            )*100)/100;
-        cilOjo1Adaptado = 
+            )*100)/100);
+        cilOjo1Adaptado = redondearACuartos ( 
             Math.round((
             parseFloat(cilOjo1/100) / (1-((parseFloat(distanciaVertice)/1000)*parseFloat(cilOjo1/100)))     
-            )*100)/100;
+            )*100)/100);
     } else {
         esfOjo1Adaptado = null;
         cilOjo1Adaptado = null;
     }
     if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-        esfOjo2Adaptado = 
+        esfOjo2Adaptado = redondearACuartos ( 
             Math.round((
             parseFloat(esfOjo2/100) / (1-((parseFloat(distanciaVertice)/1000)*parseFloat(esfOjo2/100)))
-            )*100)/100;
-        cilOjo2Adaptado = 
+            )*100)/100);
+        cilOjo2Adaptado = redondearACuartos( 
             Math.round((
             parseFloat(cilOjo2/100) / (1-((parseFloat(distanciaVertice)/1000)*parseFloat(cilOjo2/100)))     
-            )*100)/100;
+            )*100)/100);
     } else {
         esfOjo2Adaptado = null;
         cilOjo2Adaptado = null;
@@ -162,8 +170,3 @@ const muestroDatos = () => {
 
 //Muestro Datos
 muestroDatos();
-
-//Control
-console.log(recetaOriginal);
-console.log(recetaAdaptada);
-console.log(distanciaVertice);
