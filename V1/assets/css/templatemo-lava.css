@@ -203,6 +203,10 @@ button.main-button:hover {
   background-color: #047004;
 }
 
+.button-img:hover {
+  cursor: pointer;
+  opacity: 0.50;
+}
 
 .center-heading {
   margin-bottom: 70px;

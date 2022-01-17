@@ -3,6 +3,7 @@ let ojoACalcular;
 let distanciaVertice;
 
 //Clase Receta
+//Se usará para crear todas las recetas utilizadas
 class Receta {
   constructor(
     ojo1,
@@ -23,8 +24,9 @@ class Receta {
     this.cilOjo2 = cilOjo2;
     this.ejeOjo2 = ejeOjo2;
   }
-  
+
   //Metodo para mostrar los datos de las recetas
+  //Solo mostrará los ojos calculados, y ajustará todo a 2 decimales
   muestroDatos = () => {
     if (ojoACalcular == "od") {
       return `${this.ojo1.toUpperCase()} ${this.esfOjo1.toFixed(
@@ -45,6 +47,8 @@ class Receta {
 }
 
 //DECLARO FUNCION -- Ingresar y validar ojo a calcular
+//Valida que solo se pueda ingresar OD, OI o AO
+//De lo contrario, no permite avanzar
 const validaOjo = () => {
   ojoACalcular = prompt(
     "¿La receta es para Ojo Derecho, Ojo Izquierdo o Ambos Ojos? Ingrese OD, OI o AO"
@@ -55,6 +59,8 @@ const validaOjo = () => {
 };
 
 //DECLARO FUNCION -- Validar cualquier graduacion ingresada
+//Valida que las graduaciones sean correctas (multiplos de 25)
+//De lo contrario, no permite avanzar
 const validoGraduacion = (graduacionIngresada) => {
   while (graduacionIngresada % 25 != 0) {
     graduacionIngresada = Number(
@@ -65,6 +71,8 @@ const validoGraduacion = (graduacionIngresada) => {
 };
 
 //DECLARO FUNCION -- Validar ejes
+//Valida que los ejes ingresados sean correctos (entre 0 y 180)
+//De lo contrario, no permite avanzar
 const validoEje = (ejeIngresado) => {
   while (ejeIngresado < 0 || ejeIngresado > 180) {
     ejeIngresado = Number(prompt("El eje debe ser un valor entre 0 y 180"));
@@ -73,6 +81,8 @@ const validoEje = (ejeIngresado) => {
 };
 
 //DECLARO FUNCION -- Validar distancia al vertice
+//Valida que la distancia al vertice ingresada sea correcta (entre 13 y 17)
+//De lo contrario, no permite avanzar
 const validoDistancia = (distanciaIngresada) => {
   while (distanciaIngresada < 13 || distanciaIngresada > 17) {
     distanciaIngresada = Number(
@@ -82,7 +92,8 @@ const validoDistancia = (distanciaIngresada) => {
   return distanciaIngresada;
 };
 
-//DECLARO FUNCION -- Ingreso de datos a la receta original (dato conocido)
+//DECLARO FUNCION -- Ingreso de datos a la receta original
+//El usuario ingresará los datos de la receta de anteojos con la que cuenta
 const ingresoDatosReceta = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
     let paramGraduacion1 = Number(
@@ -113,6 +124,7 @@ const ingresoDatosReceta = () => {
 };
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
+//Funcion para redondear los resultados obtenidos a cuartos (multiplos de 0.25)
 const redondearACuartos = (num) => {
   num *= 4;
   num = Math.round(num) / 4;
@@ -194,6 +206,7 @@ const recetaAdaptada = new Receta(
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
 const runDistometria = () => {
+  
   //Llamo funcion para ingresar ojo a calcular
   validaOjo();
 

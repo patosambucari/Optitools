@@ -1,4 +1,5 @@
 //Clase Graduacion Esferica
+//Para crear objetos "graduación" que estarán contenids en el array de graduaciones disponibles
 class GraduacionEsf {
   constructor(esf, cil, eje, marcasDisponibles) {
     this.esf = esf;
@@ -9,12 +10,14 @@ class GraduacionEsf {
 }
 
 //Creo instancia Receta Sugerida (de tipo Receta)
+//Aqui se almacenará la receta sugerida
 const recetaEsfSugerida = new Receta("OD", null, -0.0, 0, "OI", null, -0.0, 0);
 
 //Creo Array para almacenar las graduaciones disponibles
 const graduacionesEsfericasDisponibles = new Array(GraduacionEsf);
 
 //DECLARO FUNCION -- Lleno el array con las graduaciones y marcas disponibles
+//De acuerdo a las especificaciones de los distintos fabricantes
 const completarGraduacionesEsfericasDisponibles = () => {
   for (let esf = -20.0; esf <= -6.5; esf += 0.5) {
     if (esf >= -20.0 && esf < -12.0) {
@@ -72,21 +75,28 @@ const completarGraduacionesEsfericasDisponibles = () => {
 //DECLARO FUNCION -- Calculo graduacion esferica sugerida de acuerdo al valor del cilindro
 const calcularEsfSugerido = (esf, cil) => {
   let sugeridaEsferica;
+  //Si el cilindrico adaptado es 0.00 o 0.25, el esferico sugerido queda como está
   if (Math.abs(cil) >= 0 && Math.abs(cil) <= 0.25) {
     sugeridaEsferica = esf;
-  } else if (Math.abs(cil) > 0.25 && Math.abs(cil) <= 0.75) {
+  } 
+  //Si el cilindrico adaptado es 0.50 o 0.75, al esferico sugerido se le resta o suma 0.25
+  else if (Math.abs(cil) > 0.25 && Math.abs(cil) <= 0.75) {
     if (cil < 0) {
       sugeridaEsferica = esf - 0.25;
     } else if (cil > 0) {
       sugeridaEsferica = esf + 0.25;
     }
-  } else if (Math.abs(cil) > 0.75 && Math.abs(cil) <= 1.0) {
+  } 
+  //Si el cilindrico adaptado es 1.00 o 1.25, al esferico sugerido se le resta o suma 0.50
+  else if (Math.abs(cil) > 0.75 && Math.abs(cil) <= 1.25) {
     if (cil < 0) {
       sugeridaEsferica = esf - 0.5;
     } else if (cil > 0) {
       sugeridaEsferica = esf + 0.5;
     }
-  } else if (Math.abs(cil) > 1.0 && Math.abs(cil) <= 1.75) {
+  } 
+  //Si el cilindrico adaptado es 1.50 o 2.75, al esferico sugerido se le resta o suma 0.75
+  else if (Math.abs(cil) > 1.25 && Math.abs(cil) <= 1.75) {
     if (cil < 0) {
       sugeridaEsferica = esf - 0.75;
     } else if (cil > 0) {
@@ -129,10 +139,25 @@ const asignaGradEsfericaSugerida = () => {
   }
 };
 
-//DECLARO FUNCION -- Muestro por pantalla la graduación sugerida para la lente
+//DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
   if (esf !== null) {
-    alert(`Lente recomendada para el ${ojo}: ${esf.toFixed(2)} ${cil.toFixed(2)} x ${eje}º \n${sugerirMarca(buscaEsfSugeridoEntreDisponibles(esf))}`);
+    //Si la graduación sugerida es mayor a 15.00 o menor a -20.00, no hay graduaciones disponibles
+    if (esf > 15.0 || esf < -20.0) {
+      alert(
+        `La graduación recomendada para el ${ojo} es ${esf.toFixed(
+          2
+        )} ${cil.toFixed(
+          2
+        )} x ${eje}º. \nNo hay lentes esféricas disponibles para esta graduación.`
+      );
+    } else {
+      alert(
+        `Lente recomendada para el ${ojo}: ${sugerirMarca(
+          buscaEsfSugeridoEntreDisponibles(esf)
+        )}`
+      );
+    }
   } else {
     if (cil !== null) {
       alert(
@@ -144,13 +169,35 @@ const sugerirLenteEsf = (ojo, esf, cil, eje) => {
 
 //DECLARO FUNCION -- Devolver marcas recomendadas de acuerdo a la graduación esférica sugerida
 const buscaEsfSugeridoEntreDisponibles = (esfABuscar) => {
-    return graduacionesEsfericasDisponibles.findIndex(Element => Element.esf == esfABuscar);
-}
+  let elementoBuscado = graduacionesEsfericasDisponibles.findIndex(
+    (Element) => Element.esf == esfABuscar
+  );
+  //En caso de no hallar el elemento, aproxima a la mas conveniente.
+  if (elementoBuscado == -1) {
+    if (esfABuscar > 0) {
+      elementoBuscado = graduacionesEsfericasDisponibles.findIndex(
+        (Element) => Element.esf == esfABuscar - 0.25
+      );
+    } else if (esfABuscar <= 0) {
+      elementoBuscado = graduacionesEsfericasDisponibles.findIndex(
+        (Element) => Element.esf == esfABuscar + 0.25
+      );
+    }
+  }
+  // Si encuentra el elemento buscado, devuelve su indice
+  return elementoBuscado;
+};
 
-//DECLARO FUNCION -- Sugerir marca de acuerdo a graduación
+//DECLARO FUNCION -- Sugerir graduación y marcas de acuerdo al indice obtenido
 const sugerirMarca = (indice) => {
-    return (`Marcas disponibles: ${graduacionesEsfericasDisponibles[indice].marcasDisponibles}`);
-}
+  return `${graduacionesEsfericasDisponibles[indice].esf.toFixed(
+    2
+  )} ${graduacionesEsfericasDisponibles[indice].cil.toFixed(2)} x ${
+    graduacionesEsfericasDisponibles[indice].eje
+  }º \nMarcas disponibles: ${
+    graduacionesEsfericasDisponibles[indice].marcasDisponibles
+  }`;
+};
 
 //LLAMO FUNCION -- Completar array de graduaciones disponibles
 completarGraduacionesEsfericasDisponibles();
@@ -172,10 +219,7 @@ sugerirLenteEsf(
   recetaEsfSugerida.ejeOjo2
 );
 
-
-
-//Testeos
+//PRUEBAS CONSOLA
 console.table(graduacionesEsfericasDisponibles);
 console.table(recetaAdaptada);
 console.table(recetaEsfSugerida);
-console.log(Math.max(graduacionesEsfericasDisponibles.esf));
