@@ -1,3 +1,5 @@
+(function(obj){
+
 //Declaro Variables globales
 let ojoACalcular;
 let distanciaVertice;
@@ -216,12 +218,48 @@ const runDistometria = () => {
   //Calculo distometria sobre receta original
   distometria();
 
-  //Muestro Datos
-  alert(`La receta original ingresada es: 
-${recetaOriginal.muestroDatos()}`);
-  alert(`La receta adaptada a LC para una distancia al vertice de ${distanciaVertice} es: 
-${recetaAdaptada.muestroDatos()}`);
-};
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecetaOriginal = () => {
+    const nuevoH3 = document.createElement("h3");
+    const nuevoH4 = document.createElement("h4");
+    const tituloRecetaOriginal = document.createTextNode(`La receta original ingresada es:\n`);
+    const datosRecetaOriginal = document.createTextNode(`${recetaOriginal.muestroDatos()}`);
+    nuevoH3.appendChild(tituloRecetaOriginal);
+    nuevoH4.appendChild(datosRecetaOriginal);
+    let divActual = document.getElementById("principal");
+    divActual.appendChild(nuevoH3);
+    divActual.appendChild(nuevoH4);
+  }
 
-//LLAMO FUNCION - Ejecuta funcionalidad
-runDistometria();
+  const agregoElementoRecetaNueva = () => {
+    const nuevoH3Resultado = document.createElement("h3");
+    const nuevoH4Resultado = document.createElement("h4");
+    const tituloRecetaAdaptada = document.createTextNode(`La receta adaptada a LC para una distancia al vertice de ${distanciaVertice} es:`);
+    const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
+    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
+    let divActual = document.getElementById("principal");
+    divActual.appendChild(nuevoH3Resultado);
+    divActual.appendChild(nuevoH4Resultado);
+  }
+
+  agregoElementoRecetaOriginal();
+  agregoElementoRecetaNueva();
+
+  //Modifico Elemento (texto de bienvenida)
+  const cambioTexto = () => {
+  var bienvenida = document.getElementById("bienvenida");
+  bienvenida.innerHTML="¡Ya lo calculamos!";
+  };
+
+  cambioTexto();
+}
+
+  //Ejecuto funcionalidad usando el boton
+  const boton = document.getElementById("calcular");
+  boton.addEventListener("click", () => {
+    runDistometria();
+    boton.innerText="Volver a calcular";
+  })
+
+})(window);
