@@ -31,8 +31,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
+  }  
 #ingresoDatos > div {
   background-color: yellowgreen;
   /*border: 1px solid #191a20;*/
@@ -45,16 +44,9 @@ p {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 #ingresoDatos > div > p{
   color:aliceblue;
 }
-
-.labelsFormulario{
-  color:aliceblue;
-  font-weight: bold;
-}
-
 #ingresoDatos > div > h3{
   color:#191a20;
   font: bold;
@@ -62,12 +54,48 @@ p {
   font-size: 20px;
 }
 
+#ingresoDatos > #botoneraAcciones {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-left: 0px;
+}
+#ingresoDatos > #botoneraAcciones > .labelsFormulario{
+  color: black;
+}
+#ingresoDatos > #botoneraAcciones > .subtexto{
+  color: black;
+}
+#ingresoDatos > #botoneraAcciones > .inputsFormulario{
+  border: 1px solid black;
+}
+#ingresoDatos > #botoneraAcciones > .main-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  margin-left: 0px;}
+
+
+.labelsFormulario{
+  color:aliceblue;
+  font-weight: bold;
+}
+
+.subtexto {
+  color:white;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  margin-left: 35px;
+  margin-top: -5px;
+  margin-bottom: 2px;
+}
+
 .inputsFormulario{
   color: black;
   font: bold;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
-  margin-left: 5px;
-  margin-bottom: 2px;
-  
+  margin-left: 5px; 
+  border-radius: 5px;
+  border: none;
 }

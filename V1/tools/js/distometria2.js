@@ -1,3 +1,32 @@
+//Contenidos Dinámicos
+var botonOD = document.getElementById("botonOD");
+var botonOI = document.getElementById("botonOI");
+var botonAO = document.getElementById("botonAO");
+var datosOD = document.getElementById("ingresoDatosOd");
+var datosOI = document.getElementById("ingresoDatosOi");
+
+botonOD.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "block";
+  datosOI.style.display = "none";
+  ojoACalcular="od"
+});
+
+botonOI.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "none";
+  datosOI.style.display = "block";
+  ojoACalcular="oi"
+});
+
+botonAO.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "block";
+  datosOI.style.display = "block";
+  ojoACalcular="ao"
+});
+
+
 //Declaro Variables globales
 let ojoACalcular;
 let distanciaVertice;
@@ -45,18 +74,6 @@ class Receta {
     }
   };
 }
-
-//DECLARO FUNCION -- Ingresar y validar ojo a calcular
-//Valida que solo se pueda ingresar OD, OI o AO
-//De lo contrario, no permite avanzar
-const validaOjo = () => {
-  ojoACalcular = prompt(
-    "¿La receta es para Ojo Derecho, Ojo Izquierdo o Ambos Ojos? Ingrese OD, OI o AO"
-  ).toLowerCase();
-  while (ojoACalcular != "od" && ojoACalcular != "oi" && ojoACalcular != "ao") {
-    ojoACalcular = prompt("Debe ingresar OD, OI o AO").toLowerCase();
-  }
-};
 
 //DECLARO FUNCION -- Validar cualquier graduacion ingresada
 //Valida que las graduaciones sean correctas (multiplos de 25)
@@ -207,8 +224,6 @@ const recetaAdaptada = new Receta(
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
 const runDistometria = () => {
   
-  //Llamo funcion para ingresar ojo a calcular
-  validaOjo();
 
   //Llamo Funcion para ingresar datos originales
   ingresoDatosReceta();
@@ -224,4 +239,4 @@ ${recetaAdaptada.muestroDatos()}`);
 };
 
 //LLAMO FUNCION - Ejecuta funcionalidad
-runDistometria();
+//runDistometria();
