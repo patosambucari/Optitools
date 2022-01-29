@@ -1,7 +1,5 @@
-(function(obj){
-
 //Declaro Variables globales
-let ojoACalcular;
+let ojoACalcular = "ao";
 let distanciaVertice;
 
 //Clase Receta
@@ -45,85 +43,234 @@ class Receta {
         this.ejeOjo2
       }º`;
     }
-  };
+  }
 }
 
-//DECLARO FUNCION -- Ingresar y validar ojo a calcular
-//Valida que solo se pueda ingresar OD, OI o AO
-//De lo contrario, no permite avanzar
-const validaOjo = () => {
-  ojoACalcular = prompt(
-    "¿La receta es para Ojo Derecho, Ojo Izquierdo o Ambos Ojos? Ingrese OD, OI o AO"
-  ).toLowerCase();
-  while (ojoACalcular != "od" && ojoACalcular != "oi" && ojoACalcular != "ao") {
-    ojoACalcular = prompt("Debe ingresar OD, OI o AO").toLowerCase();
-  }
-};
+  //Creo instancias Receta Original y adaptada
+  const recetaOriginal = new Receta(
+    "OD",
+    null,
+    null,
+    null,
+    "OI",
+    null,
+    null,
+    null
+  );
+  
+  const recetaAdaptada = new Receta(
+    "OD",
+    null,
+    null,
+    null,
+    "OI",
+    null,
+    null,
+    null
+  );
 
-//DECLARO FUNCION -- Validar cualquier graduacion ingresada
-//Valida que las graduaciones sean correctas (multiplos de 25)
-//De lo contrario, no permite avanzar
-const validoGraduacion = (graduacionIngresada) => {
-  while (graduacionIngresada % 25 != 0) {
-    graduacionIngresada = Number(
-      prompt("Por favor, ingrese correctamente la graduación")
-    );
-  }
-  return graduacionIngresada;
-};
+//Contenidos Dinámicos
+//Selector de ojo, muestra ingreso de datos de acuerdo a lo seleccionado
+var botonOD = document.getElementById("botonOD");
+var botonOI = document.getElementById("botonOI");
+var botonAO = document.getElementById("botonAO");
+var datosOD = document.getElementById("ingresoDatosOd");
+var datosOI = document.getElementById("ingresoDatosOi");
 
-//DECLARO FUNCION -- Validar ejes
-//Valida que los ejes ingresados sean correctos (entre 0 y 180)
-//De lo contrario, no permite avanzar
-const validoEje = (ejeIngresado) => {
-  while (ejeIngresado < 0 || ejeIngresado > 180) {
-    ejeIngresado = Number(prompt("El eje debe ser un valor entre 0 y 180"));
-  }
-  return ejeIngresado;
-};
+//Solo muestra el formulario del ojo seleccionado, y oculta el otro
+botonOD.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "block";
+  datosOI.style.display = "none";
+  ojoACalcular="od";
+});
 
-//DECLARO FUNCION -- Validar distancia al vertice
-//Valida que la distancia al vertice ingresada sea correcta (entre 13 y 17)
-//De lo contrario, no permite avanzar
-const validoDistancia = (distanciaIngresada) => {
-  while (distanciaIngresada < 13 || distanciaIngresada > 17) {
-    distanciaIngresada = Number(
-      prompt("La distancia al vértice debe ser entre 13 mm y 17 mm")
-    );
-  }
-  return distanciaIngresada;
-};
+botonOI.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "none";
+  datosOI.style.display = "block";
+  ojoACalcular="oi";
+});
+
+//En caso de seleccionar ambos ojos, muestra ambos
+botonAO.addEventListener("click", (event) => {
+  event.preventDefault();
+  datosOD.style.display = "block";
+  datosOI.style.display = "block";
+  ojoACalcular="ao";
+});
+
+//Capturo datos del formulario
+let campoEsfOd = document.querySelector("#esfOd");
+let campoCilOd = document.querySelector("#cilOd");
+let campoEjeOd = document.querySelector("#ejeOd");
+let campoEsfOi = document.querySelector("#esfOi");
+let campoCilOi = document.querySelector("#cilOi");
+let campoEjeOi = document.querySelector("#ejeOi");
+let campoDistVertice = document.querySelector("#distanciaVertice");
+let subtextoEsfOd = document.querySelector("#subtextoEsfOd");
+let subtextoCilOd = document.querySelector("#subtextoCilOd");
+let subtextoEjeOd = document.querySelector("#subtextoEjeOd");
+let subtextoEsfOi = document.querySelector("#subtextoEsfOi");
+let subtextoCilOi = document.querySelector("#subtextoCilOi");
+let subtextoEjeOi = document.querySelector("#subtextoEjeOi");
+let subtextoDistVertice = document.querySelector("#subtextoDistanciaVertice");
+let validOD = false;
+let validOI = false;
+let botonProcesar = document.getElementById("botonProcesar");
+let mensajeErrorValidacion = document.querySelector("#subtextoValidacion");
+let formIngresoReceta = document.getElementById("ingresoReceta");
+
+//------INICIO VALIDACIONES EN CAMBIOS------
+//Validacion de campos GRADUACION
+//¿Hay forma de hacer esto una sola vez y aplicarlo a todos los campos del mismo tipo?
+//campoEsfOd
+campoEsfOd.addEventListener("keyup", () => {
+  if (campoEsfOd.value % 25 != 0 || campoEsfOd.value < -3000 || campoEsfOd.value > 3000){
+    campoEsfOd.style.backgroundColor="red";
+    subtextoEsfOd.innerHTML="Verifique la graduación ingresada";
+    subtextoEsfOd.style.color="red";
+    validOD = false;
+  } else if (campoEsfOd.value % 25 == 0){
+    campoEsfOd.style.backgroundColor="lightgreen";
+    subtextoEsfOd.innerHTML="¡OK!";
+    subtextoEsfOd.style.color="darkgreen";
+    validOD = true;
+  } 
+})
+
+//campoCilOd
+campoCilOd.addEventListener("keyup", () => {
+  if (campoCilOd.value % 25 != 0 || campoCilOd.value < -3000 || campoCilOd.value > 3000){
+    campoCilOd.style.backgroundColor="red";
+    subtextoCilOd.innerHTML="Verifique la graduación ingresada";
+    subtextoCilOd.style.color="red";
+    validOD = false;
+  } else if (campoCilOd.value % 25 == 0){
+    campoCilOd.style.backgroundColor="lightgreen";
+    subtextoCilOd.innerHTML="¡OK!";
+    subtextoCilOd.style.color="darkgreen";
+    validOD = true;
+  } 
+})
+
+//campoEsfOi
+campoEsfOi.addEventListener("keyup", () => {
+  if (campoEsfOi.value % 25 != 0 || campoEsfOi.value < -3000 || campoEsfOi.value > 3000){
+    campoEsfOi.style.backgroundColor="red";
+    subtextoEsfOi.innerHTML="Verifique la graduación ingresada";
+    subtextoEsfOi.style.color="red";
+    validOI = false;
+  } else if (campoEsfOi.value % 25 == 0){
+    campoEsfOi.style.backgroundColor="lightgreen";
+    subtextoEsfOi.innerHTML="¡OK!";
+    subtextoEsfOi.style.color="darkgreen";
+    validOI = true;
+  } 
+})
+
+//campoCilOi
+campoCilOi.addEventListener("keyup", () => {
+  if (campoCilOi.value % 25 != 0 || campoCilOi.value < -3000 || campoCilOi.value > 3000){
+    campoCilOi.style.backgroundColor="red";
+    subtextoCilOi.innerHTML="Verifique la graduación ingresada";
+    subtextoCilOi.style.color="red";
+    validOI = false;
+  } else if (campoCilOi.value % 25 == 0){
+    campoCilOi.style.backgroundColor="lightgreen";
+    subtextoCilOi.innerHTML="¡OK!";
+    subtextoCilOi.style.color="darkgreen";
+    validOI = true;
+  } 
+})
+
+//Validacion campos EJES
+//EjeOD
+campoEjeOd.addEventListener("keyup", () => {
+  if (campoEjeOd.value < 0 || campoEjeOd.value > 180){
+    campoEjeOd.style.backgroundColor="red";
+    subtextoEjeOd.innerHTML="Ingrese un eje válido (entre 0 y 180)";
+    subtextoEjeOd.style.color="red";
+    validOD = false;
+  } else{
+    campoEjeOd.style.backgroundColor="lightgreen";
+    subtextoEjeOd.innerHTML="¡OK!";
+    subtextoEjeOd.style.color="darkgreen";
+    validOD = true;
+  } 
+})
+
+//EjeOI
+campoEjeOi.addEventListener("keyup", () => {
+  if (campoEjeOi.value < 0 || campoEjeOi.value > 180){
+    campoEjeOi.style.backgroundColor="red";
+    subtextoEjeOi.innerHTML="Ingrese un eje válido (entre 0 y 180)";
+    subtextoEjeOi.style.color="red";
+    validOI = false;
+  } else{
+    campoEjeOi.style.backgroundColor="lightgreen";
+    subtextoEjeOi.innerHTML="¡OK!";
+    subtextoEjeOi.style.color="darkgreen";
+    validOI = true;
+  } 
+})
+
+// Validacion campo Distancia al Vertice
+campoDistVertice.addEventListener("keyup", () => {
+  if (campoDistVertice.value < 13 || campoDistVertice.value > 17){
+    campoDistVertice.style.backgroundColor="red";
+    subtextoDistVertice.innerHTML="Ingrese una distancia válida (entre 13 y 17)";
+    subtextoDistVertice.style.color="red";
+  } else{
+    campoDistVertice.style.backgroundColor="lightgreen";
+    subtextoDistVertice.innerHTML="¡OK!";
+    subtextoDistVertice.style.color="darkgreen";
+  } 
+})
+//------FIN VALIDACIONES EN CAMBIOS------
+
 
 //DECLARO FUNCION -- Ingreso de datos a la receta original
 //El usuario ingresará los datos de la receta de anteojos con la que cuenta
 const ingresoDatosReceta = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
-    let paramGraduacion1 = Number(
-      prompt(`Ingrese graduación esférica para el OD (sin puntuación)`)
-    );
-    recetaOriginal.esfOjo1 = validoGraduacion(paramGraduacion1) / 100;
-    let paramGraduacion2 = Number(
-      prompt(`Ingrese graduación cilíndrica para el OD (sin puntuación)`)
-    );
-    recetaOriginal.cilOjo1 = validoGraduacion(paramGraduacion2) / 100;
-    let paramEje = Number(prompt(`Ingrese el eje para el OD`));
-    recetaOriginal.ejeOjo1 = validoEje(paramEje);
+    recetaOriginal.esfOjo1 = Number(campoEsfOd.value)/100;
+    recetaOriginal.cilOjo1 = Number(campoCilOd.value)/100;
+    recetaOriginal.ejeOjo1 = Number(campoEjeOd.value);
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-    let paramGraduacion3 = Number(
-      prompt(`Ingrese graduación esférica para el OI (sin puntuación)`)
-    );
-    recetaOriginal.esfOjo2 = validoGraduacion(paramGraduacion3) / 100;
-    let paramGraduacion4 = Number(
-      prompt(`Ingrese graduación cilíndrica para el OI (sin puntuación)`)
-    );
-    recetaOriginal.cilOjo2 = validoGraduacion(paramGraduacion4) / 100;
-    let paramEje2 = Number(prompt(`Ingrese el eje para el OI`));
-    recetaOriginal.ejeOjo2 = validoEje(paramEje2);
+    recetaOriginal.esfOjo2 = Number(campoEsfOi.value)/100;
+    recetaOriginal.cilOjo2 = Number(campoCilOi.value)/100;
+    recetaOriginal.ejeOjo2 = Number(campoEjeOi.value);
   }
-  let paramDistancia = Number(prompt(`Ingrese la distancia al vertice`));
-  distanciaVertice = validoDistancia(paramDistancia);
+  distanciaVertice = Number(campoDistVertice.value);
 };
+
+//------VALIDACIONES EN ENVIO------
+//Validacion campos vacios
+const validoCamposVacios = () => {
+  if (campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
+      validOD = false;
+  } else validOD = true;  
+  if (campoEsfOi.value == "" || campoCilOi.value == null || campoEjeOi.value == ""){
+      validOI = false;
+  } else validOI = true;
+}
+
+//Validacion segun ojo a completar
+const validacionSegunOjo = () => {
+if ((ojoACalcular == "od" || ojoACalcular == "ao") && validOD == false){
+      mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
+    } else if ((ojoACalcular == "oi" || ojoACalcular == "ao") && validOI == false){
+      mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
+    } else {
+      mensajeErrorValidacion.innerHTML="";
+      ingresoDatosReceta();
+      formIngresoReceta.style.display="none";
+      runDistometria();
+      console.table(recetaOriginal); //para prueba
+    }
+}
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
 //Funcion para redondear los resultados obtenidos a cuartos (multiplos de 0.25)
@@ -184,37 +331,10 @@ const distometria = () => {
   }
 };
 
-//Creo instancias Receta Original y adaptada
-const recetaOriginal = new Receta(
-  "OD",
-  null,
-  null,
-  null,
-  "OI",
-  null,
-  null,
-  null
-);
-const recetaAdaptada = new Receta(
-  "OD",
-  null,
-  null,
-  null,
-  "OI",
-  null,
-  null,
-  null
-);
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
 const runDistometria = () => {
   
-  //Llamo funcion para ingresar ojo a calcular
-  validaOjo();
-
-  //Llamo Funcion para ingresar datos originales
-  ingresoDatosReceta();
-
   //Calculo distometria sobre receta original
   distometria();
 
@@ -226,7 +346,7 @@ const runDistometria = () => {
     const datosRecetaOriginal = document.createTextNode(`${recetaOriginal.muestroDatos()}`);
     nuevoH3.appendChild(tituloRecetaOriginal);
     nuevoH4.appendChild(datosRecetaOriginal);
-    let divActual = document.getElementById("principal");
+    let divActual = document.getElementById("resultados");
     divActual.appendChild(nuevoH3);
     divActual.appendChild(nuevoH4);
   }
@@ -238,28 +358,34 @@ const runDistometria = () => {
     const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
     nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
     nuevoH4Resultado.appendChild(datosRecetaAdaptada);
-    let divActual = document.getElementById("principal");
+    let divActual = document.getElementById("resultados");
     divActual.appendChild(nuevoH3Resultado);
     divActual.appendChild(nuevoH4Resultado);
   }
 
+  const agregoBotonNuevoCalculo = () => {
+    const botonNuevoCalculo =document.createElement("button");
+    botonNuevoCalculo.innerText="NUEVA RECETA";
+    botonNuevoCalculo.className="main-button";
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(botonNuevoCalculo);
+    botonNuevoCalculo.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+  }
+
   agregoElementoRecetaOriginal();
   agregoElementoRecetaNueva();
+  agregoBotonNuevoCalculo();
 
-  //Modifico Elemento (texto de bienvenida)
-  const cambioTexto = () => {
-  var bienvenida = document.getElementById("bienvenida");
-  bienvenida.innerHTML="¡Ya lo calculamos!";
-  };
-
-  cambioTexto();
 }
 
-  //Ejecuto funcionalidad usando el boton
-  const boton = document.getElementById("calcular");
-  boton.addEventListener("click", () => {
-    runDistometria();
-    boton.innerText="Volver a calcular";
-  })
-
-})(window);
+//------------RETOMAR DESDE ACA
+//Accion boton PROCESAR
+botonProcesar.addEventListener("click", (event) => {
+  event.preventDefault();
+  validoCamposVacios();
+  console.log(validOD);//para prueba
+  console.log(validOI);//para prueba
+  validacionSegunOjo();  
+});
