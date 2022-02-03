@@ -71,8 +71,17 @@ let subtextoEsfOi = document.querySelector("#subtextoEsfOi");
 let subtextoCilOi = document.querySelector("#subtextoCilOi");
 let subtextoEjeOi = document.querySelector("#subtextoEjeOi");
 let subtextoDistVertice = document.querySelector("#subtextoDistanciaVertice");
+let validEsfOD = false;
+let validCilOD = false;
+let validEjeOD = false;
+let validEsfOI = false;
+let validCilOI = false;
+let validEjeOI = false;
+let validVaciosOD = false;
+let validVaciosOI = false;
 let validOD = false;
 let validOI = false;
+let validDistVertice = true;
 let botonProcesar = document.getElementById("botonProcesar");
 let mensajeErrorValidacion = document.querySelector("#subtextoValidacion");
 let formIngresoReceta = document.getElementById("ingresoReceta");
@@ -86,12 +95,12 @@ campoEsfOd.addEventListener("keyup", () => {
     campoEsfOd.style.backgroundColor="red";
     subtextoEsfOd.innerHTML="Verifique la graduación ingresada";
     subtextoEsfOd.style.color="red";
-    validOD = false;
+    validEsfOD = false;
   } else if (campoEsfOd.value % 25 == 0){
     campoEsfOd.style.backgroundColor="lightgreen";
     subtextoEsfOd.innerHTML="¡OK!";
     subtextoEsfOd.style.color="darkgreen";
-    validOD = true;
+    validEsfOD = true;
   } 
 })
 
@@ -101,12 +110,12 @@ campoCilOd.addEventListener("keyup", () => {
     campoCilOd.style.backgroundColor="red";
     subtextoCilOd.innerHTML="Verifique la graduación ingresada";
     subtextoCilOd.style.color="red";
-    validOD = false;
+    validCilOD = false;
   } else if (campoCilOd.value % 25 == 0){
     campoCilOd.style.backgroundColor="lightgreen";
     subtextoCilOd.innerHTML="¡OK!";
     subtextoCilOd.style.color="darkgreen";
-    validOD = true;
+    validCilOD = true;
   } 
 })
 
@@ -116,12 +125,12 @@ campoEsfOi.addEventListener("keyup", () => {
     campoEsfOi.style.backgroundColor="red";
     subtextoEsfOi.innerHTML="Verifique la graduación ingresada";
     subtextoEsfOi.style.color="red";
-    validOI = false;
+    validEsfOI = false;
   } else if (campoEsfOi.value % 25 == 0){
     campoEsfOi.style.backgroundColor="lightgreen";
     subtextoEsfOi.innerHTML="¡OK!";
     subtextoEsfOi.style.color="darkgreen";
-    validOI = true;
+    validEsfOI = true;
   } 
 })
 
@@ -131,12 +140,12 @@ campoCilOi.addEventListener("keyup", () => {
     campoCilOi.style.backgroundColor="red";
     subtextoCilOi.innerHTML="Verifique la graduación ingresada";
     subtextoCilOi.style.color="red";
-    validOI = false;
+    validCilOI = false;
   } else if (campoCilOi.value % 25 == 0){
     campoCilOi.style.backgroundColor="lightgreen";
     subtextoCilOi.innerHTML="¡OK!";
     subtextoCilOi.style.color="darkgreen";
-    validOI = true;
+    validCilOI = true;
   } 
 })
 
@@ -147,12 +156,12 @@ campoEjeOd.addEventListener("keyup", () => {
     campoEjeOd.style.backgroundColor="red";
     subtextoEjeOd.innerHTML="Ingrese un eje válido (entre 0 y 180)";
     subtextoEjeOd.style.color="red";
-    validOD = false;
+    validEjeOD = false;
   } else{
     campoEjeOd.style.backgroundColor="lightgreen";
     subtextoEjeOd.innerHTML="¡OK!";
     subtextoEjeOd.style.color="darkgreen";
-    validOD = true;
+    validEjeOD = true;
   } 
 })
 
@@ -162,12 +171,12 @@ campoEjeOi.addEventListener("keyup", () => {
     campoEjeOi.style.backgroundColor="red";
     subtextoEjeOi.innerHTML="Ingrese un eje válido (entre 0 y 180)";
     subtextoEjeOi.style.color="red";
-    validOI = false;
+    validEjeOI = false;
   } else{
     campoEjeOi.style.backgroundColor="lightgreen";
     subtextoEjeOi.innerHTML="¡OK!";
     subtextoEjeOi.style.color="darkgreen";
-    validOI = true;
+    validEjeOI = true;
   } 
 })
 
@@ -177,10 +186,12 @@ campoDistVertice.addEventListener("keyup", () => {
     campoDistVertice.style.backgroundColor="red";
     subtextoDistVertice.innerHTML="Ingrese una distancia válida (entre 13 y 17)";
     subtextoDistVertice.style.color="red";
+    validDistVertice = false;
   } else{
     campoDistVertice.style.backgroundColor="lightgreen";
     subtextoDistVertice.innerHTML="¡OK!";
     subtextoDistVertice.style.color="darkgreen";
+    validDistVertice = true;
   } 
 })
 //------FIN VALIDACIONES EN CAMBIOS------
@@ -206,27 +217,66 @@ const ingresoDatosReceta = () => {
 //Validacion campos vacios
 const validoCamposVacios = () => {
   if (campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
-      validOD = false;
-  } else validOD = true;  
+      validVaciosOD = false;
+  } else validVaciosOD = true;  
   if (campoEsfOi.value == "" || campoCilOi.value == null || campoEjeOi.value == ""){
-      validOI = false;
-  } else validOI = true;
+      validVaciosOI = false;
+  } else validVaciosOI = true;
 }
 
-//Validacion segun ojo a completar
+//VALIDACION SEGUN OJO A COMPLETAR
 const validacionSegunOjo = () => {
-if ((ojoACalcular == "od" || ojoACalcular == "ao") && validOD == false){
-      mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
-    } else if ((ojoACalcular == "oi" || ojoACalcular == "ao") && validOI == false){
-      mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
-    } else {
+//Valido que todos los campos del OD tengan datos correctos
+if (validEsfOD && validCilOD && validEjeOD) {
+  validOD = true;
+}
+//Valido que todos los campos del OI tengan datos correctos
+if (validEsfOI && validCilOI && validEjeOI) {
+  validOI = true;
+}
+
+//Valido que, cuando se pida OD o AO, el OD tenga todos los datos completos y correctos
+if (ojoACalcular == "od" || ojoACalcular == "ao"){
+  if (validVaciosOD == false) {
+    mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
+  } else if (validOD == false){
+    mensajeErrorValidacion.innerHTML="&#9888 Hay datos incorrectos &#9888";
+  }
+}
+
+//Valido que, cuando se pida OI o AO, el OI tenga todos los datos completos y correctos
+if (ojoACalcular == "oi" || ojoACalcular == "ao"){
+  if (validVaciosOI == false) {
+    mensajeErrorValidacion.innerHTML="&#9888 Todos los campos deben estar completos &#9888";
+  } else if (validOI == false){
+    mensajeErrorValidacion.innerHTML="&#9888 Hay datos incorrectos &#9888";
+  }
+}
+
+//Valido que la distancia al vertice sea correcta
+console.log(validDistVertice);
+if (validDistVertice == false) {
+  mensajeErrorValidacion.innerHTML="&#9888 Hay datos incorrectos &#9888";
+}
+
+if (
+  ((ojoACalcular == "od") && validOD && validVaciosOD)
+  ||
+  ((ojoACalcular == "oi") && validOI && validVaciosOI)
+  ||
+  ((ojoACalcular == "ao") && validOD && validVaciosOD && validOI && validVaciosOI)) {
+    if (validDistVertice){
       mensajeErrorValidacion.innerHTML="";
       ingresoDatosReceta();
       formIngresoReceta.style.display="none";
       runDistometria();
       console.table(recetaOriginal); //para prueba
-    }
+    } 
 }
+}
+
+
+
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
 //Funcion para redondear los resultados obtenidos a cuartos (multiplos de 0.25)
@@ -285,6 +335,7 @@ const distometria = () => {
     );
     recetaAdaptada.ejeOjo2 = recetaOriginal.ejeOjo2;
   }
+  
   //Almaceno en local storage las recetas
   localStorage.setItem("recetaOriginal", JSON.stringify(recetaOriginal));
   localStorage.setItem("recetaAdaptada", JSON.stringify(recetaAdaptada));
@@ -340,7 +391,6 @@ const runDistometria = () => {
     });
 
   }
-
 
   agregoElementoRecetaOriginal();
   agregoElementoRecetaNueva();
