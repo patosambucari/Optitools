@@ -133,3 +133,27 @@ p {
   border-radius: 5px;
   border: none;
 }
+
+.selectorRecomendador{
+  width: 200px;
+  height: 225px;
+  border: 3px solid green;
+  border-radius: 12px;
+  float: left;
+  margin: 0px auto;
+  padding: 3px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.selectorRecomendador > .main-button{
+  width: 150px;
+  margin:0px auto;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.iconSelector{
+  width: 150px;
+  padding-bottom: -50px;
+}

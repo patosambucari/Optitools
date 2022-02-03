@@ -329,6 +329,9 @@ const distometria = () => {
     );
     recetaAdaptada.ejeOjo2 = recetaOriginal.ejeOjo2;
   }
+  //Almaceno en local storage las recetas
+  localStorage.setItem("recetaOriginal", JSON.stringify(recetaOriginal));
+  localStorage.setItem("recetaAdaptada", JSON.stringify(recetaAdaptada));
 };
 
 
@@ -363,7 +366,7 @@ const runDistometria = () => {
     divActual.appendChild(nuevoH4Resultado);
   }
 
-  const agregoBotonNuevoCalculo = () => {
+  const agregoBotonesFinal = () => {
     const botonNuevoCalculo =document.createElement("button");
     botonNuevoCalculo.innerText="NUEVA RECETA";
     botonNuevoCalculo.className="main-button";
@@ -372,20 +375,26 @@ const runDistometria = () => {
     botonNuevoCalculo.addEventListener("click", ()=> {
       window.location.reload()
     });
+    const botonCerrarVentana =document.createElement("button");
+    botonCerrarVentana.innerText="CERRAR VENTANA";
+    botonCerrarVentana.className="main-button";
+    divActual.appendChild(botonCerrarVentana);
+    botonCerrarVentana.addEventListener("click", ()=> {
+      window.close()
+    });
+
   }
+
 
   agregoElementoRecetaOriginal();
   agregoElementoRecetaNueva();
-  agregoBotonNuevoCalculo();
+  agregoBotonesFinal();
 
 }
 
-//------------RETOMAR DESDE ACA
 //Accion boton PROCESAR
 botonProcesar.addEventListener("click", (event) => {
   event.preventDefault();
   validoCamposVacios();
-  console.log(validOD);//para prueba
-  console.log(validOI);//para prueba
   validacionSegunOjo();  
 });

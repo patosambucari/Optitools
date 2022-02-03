@@ -7,14 +7,41 @@
     <link rel="shortcut icon" href="../assets/images/favicon.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
-    <script src='js/distometria.js'></script>
-    <script src='js/recomendadorEsf.js'></script>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css"/>
+    <link rel="stylesheet" href="../assets/css/templatemo-lava.css">
 
 </head>
 <body>
-    <h1>Recomendador de lentes ESFÉRICAS</h1>
-    <h2>Encontrar la lente esférica que mejor se adapte a la graduación buscada</h2>
-    </a>
-    <p></p>
+    <h1 id="titulo">Recomendador de lentes ESFÉRICAS</h1>
+    <h2 id="subtitulo">Encontrar la lente esférica que mejor se adapte a la graduación buscada</h2>
+    <div id="selectores">
+        <div id="recetaGuardada" class="selectorRecomendador">
+            <img class= "iconSelector" src="../assets/images/recomendador-icon-saved.png">
+            <h3>Receta Guardada</h3>
+            <p>Utilizá la última receta que adaptaste</p>
+            <button id="botonRecetaGuardada" type="submit" class="main-button">Buscar</button>
+
+        </div>
+        <div id="nuevaReceta" class="selectorRecomendador">
+            <img class= "iconSelector" src="../assets/images/recomendador-icon-new.png">
+            <h3>Receta Nueva</h3>
+            <p>Ingresá un receta adaptada a LC</p>
+            <button id="botonNuevaReceta" type="submit" class="main-button">Ingresar</button>
+        </div>
+        <div id="nuevaAdaptacion" class="selectorRecomendador">
+            <img class= "iconSelector" src="../assets/images/recomendador-icon-adapt.png">
+            <h3>Nueva Adaptación</h3>
+            <p>Ingresá una nueva receta para adaptar</p>
+            <button id="botonNuevaAdaptacion" type="submit" class="main-button" 
+                onclick="window.open('distometria.html','_blank','width=700,height=600'); 
+                return false;">Adaptar</button>
+        </div>
+    </div>
 </body>
+
+<script src='js/distometria.js'></script>
+<script src='js/recomendadorEsf.js'></script>
+
 </html>

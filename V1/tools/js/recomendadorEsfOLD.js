@@ -1,37 +1,3 @@
-//CapturoElementos
-let divSelectores = document.querySelector("#selectores");
-let divNuevaReceta = document.querySelector("#nuevaReceta");
-let divRecetaGuardada = document.querySelector("#recetaGuardada");
-let divNuevaAdaptacion = document.querySelector("#nuevaAdaptacion");
-
-
-//Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
-document.addEventListener("DOMContentLoaded", ()=>{
-  if(localStorage.getItem("recetaAdaptada") === null){
-    divRecetaGuardada.style.display="none";
-  } else {
-    divRecetaGuardada.style.display="block";
-  }
-})
-
-//Refresco la pagina si se actualiza el local storage
-window.addEventListener("storage", ()=> {
-  window.location.reload();
-})
-
-recetaAdaptada=new Receta((localStorage.getItem("recetaAdaptada")).toString);
-
-
-//Creo objeto Recepta Adaptada con la información del Local Storage
-
-//----------------
-//AHORA FALTA:
-//Tomar la receta que se va a usar para el recomendador (mostrarla y preguntar si desea continuar)
-//Ejecutar el recomendador --> Ocultar los otros divs y mostrar el resultado
-//De acuerdo al resultado ingresado, mostrar imagen del producto disponible (con link a la info)
-//Boton "Buscar nuevo (recargar pagina)"
-//----------------
-
 //Clase Graduacion Esferica
 //Para crear objetos "graduación" que estarán contenids en el array de graduaciones disponibles
 class GraduacionEsf {
@@ -141,7 +107,7 @@ const calcularEsfSugerido = (esf, cil) => {
   return sugeridaEsferica;
 };
 
-//DECLARO FUNCION -- Funcion para asignar graduacion esferica sugerida, segun los valores de la receta adaptada
+//DECLARIO FUNCION -- Funcion para asignar graduacion esferica sugerida, segun los valores de la receta adaptada
 const asignaGradEsfericaSugerida = () => {
   if (recetaAdaptada.esfOjo1 !== null) {
     if (Math.abs(recetaAdaptada.cilOjo1) <= 1.75) {
@@ -173,8 +139,6 @@ const asignaGradEsfericaSugerida = () => {
   }
 };
 
-//----------------
-//HAY QUE CAMBIAR TODO ESTO QUE TENGA ALERT
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
   if (esf !== null) {
@@ -202,7 +166,6 @@ const sugerirLenteEsf = (ojo, esf, cil, eje) => {
     }
   }
 };
-//----------------
 
 //DECLARO FUNCION -- Devolver marcas recomendadas de acuerdo a la graduación esférica sugerida
 const buscaEsfSugeridoEntreDisponibles = (esfABuscar) => {
