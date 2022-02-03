@@ -37,18 +37,11 @@ p {
   margin-top: 20px;
   margin-left: 10px;
 }
-#principal > .main-button{
+#principal, #resultados > .main-button{
   margin-top: 10px;
   margin-bottom: 10px;
   width: 200px;
-  margin-left: 0px;}
-
-#resultados > .main-button{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 200px;
-  margin-left: 0px;
-}
+  margin-left: 10px;}
 
 .main-button{
   margin-top: 10px;
@@ -62,6 +55,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    float:none;
   }  
 #ingresoDatos > div {
   background-color: yellowgreen;
@@ -146,6 +140,7 @@ p {
   margin-top: 10px;
   margin-left: 10px;
 }
+
 .selectorRecomendador > .main-button{
   width: 150px;
   margin:0px auto;

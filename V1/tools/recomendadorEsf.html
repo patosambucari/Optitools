@@ -27,7 +27,7 @@
         <div id="nuevaReceta" class="selectorRecomendador">
             <img class= "iconSelector" src="../assets/images/recomendador-icon-new.png">
             <h3>Receta Nueva</h3>
-            <p>Ingresá un receta adaptada a LC</p>
+            <p>Ingresá una receta ya adaptada para LC</p>
             <button id="botonNuevaReceta" type="submit" class="main-button">Ingresar</button>
         </div>
         <div id="nuevaAdaptacion" class="selectorRecomendador">
@@ -39,9 +39,55 @@
                 return false;">Adaptar</button>
         </div>
     </div>
+    
+    <div style="clear:both;"></div>
+    <br/>
+    <h2 id="subtitulo">NUEVA RECETA</h2>
+    <form id="ingresoReceta">
+        <div id="botoneraOjos">
+            <button id="botonOD" class="main-button">OD</button>
+            <button id="botonOI" class="main-button">OI</button>
+            <button id="botonAO" class="main-button">AO</button>
+            <br/>
+        </div>
+
+        <div id="ingresoDatos">
+            <form id="formIngresoDatos">
+            <div id="ingresoDatosOd">
+                <h3>Ojo DERECHO</h3>
+                    <label for="esfOd" class="labelsFormulario"> Esf. </label>
+                    <input name="esfOd" type="number" max="3000" min="-3000" step="25" required="yes" id="esfOd" class="inputsFormulario"><br/>
+                    <p id="subtextoEsfOd"class="subtexto">Ingrese graduación esférica (sin puntuación)</p>
+                    <label for="cilOd" class="labelsFormulario"> Cil. </label>
+                    <input name="cilOd" type="number" max="800" min="-800" step="25" required="yes" id="cilOd" class="inputsFormulario"><br/>
+                    <p id="subtextoCilOd" class="subtexto">Ingrese graduación cilíndrica (sin puntuación)</p>
+                    <label for="ejeOd" class="labelsFormulario"> Eje. </label>
+                    <input name="ejeOd" type="number" max="180" min="0" required="yes" id="ejeOd" class="inputsFormulario"><br/>
+                    <p id="subtextoEjeOd" class="subtexto">Ingrese eje (0 a 180)</p>
+            </div>
+
+            <div id="ingresoDatosOi" >
+                <h3>Ojo IZQUIERDO</h3>
+                    <label for="esfOi" class="labelsFormulario"> Esf. </label>
+                    <input name="esfOi" type="number" max="3000" min="-3000" step="25" required="yes" id="esfOi" class="inputsFormulario"><br/>
+                    <p id="subtextoEsfOi" class="subtexto">Ingrese graduación esférica (sin puntuación)</p>
+                    <label for="cilOi" class="labelsFormulario"> Cil. </label>
+                    <input name="cilOi" type="number" max="800" min="-800" step="25" required="yes" id="cilOi" class="inputsFormulario"><br/>
+                    <p id="subtextoCilOi" class="subtexto">Ingrese graduación cilíndrica (sin puntuación)</p>
+                    <label for="ejeOi" class="labelsFormulario"> Eje. </label>
+                    <input name="ejeOi" type="number" max="180" min="0" required="yes" id="ejeOi" class="inputsFormulario"><br/>
+                    <p id="subtextoEjeOi" class="subtexto">Ingrese eje (0 a 180)</p>
+            </div>
+            
+            <div id="botoneraAcciones">
+                <button id="botonReset" type="reset" class="main-button">Borrar datos</button>
+                <button id="botonIngresar" type="submit" class="main-button">Ingresar</button>
+                <p id ="subtextoValidacion"></p>
+                </div>
+        </form>
 </body>
 
-<script src='js/distometria.js'></script>
+<script src="js/classReceta.js"></script>
 <script src='js/recomendadorEsf.js'></script>
 
 </html>

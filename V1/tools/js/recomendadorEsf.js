@@ -19,18 +19,12 @@ window.addEventListener("storage", ()=> {
   window.location.reload();
 })
 
-recetaAdaptada=new Receta((localStorage.getItem("recetaAdaptada")).toString);
-
-
 //Creo objeto Recepta Adaptada con la información del Local Storage
-
-//----------------
-//AHORA FALTA:
-//Tomar la receta que se va a usar para el recomendador (mostrarla y preguntar si desea continuar)
-//Ejecutar el recomendador --> Ocultar los otros divs y mostrar el resultado
-//De acuerdo al resultado ingresado, mostrar imagen del producto disponible (con link a la info)
-//Boton "Buscar nuevo (recargar pagina)"
-//----------------
+//VER DE DONDE VIENE RECETA ADAPTADA
+//recetaAdaptada=new Receta(JSON.parse(localStorage.getItem("recetaAdaptada")));
+recetaAdaptada = JSON.parse(localStorage.getItem("recetaAdaptada")); 
+//console.log(localStorage.getItem("recetaAdaptada"));
+console.log(recetaAdaptada);
 
 //Clase Graduacion Esferica
 //Para crear objetos "graduación" que estarán contenids en el array de graduaciones disponibles
@@ -173,6 +167,15 @@ const asignaGradEsfericaSugerida = () => {
   }
 };
 
+
+//----------------
+//AHORA FALTA:
+//Tomar la receta que se va a usar para el recomendador (mostrarla y preguntar si desea continuar)
+//Ejecutar el recomendador --> Ocultar los otros divs y mostrar el resultado
+//De acuerdo al resultado ingresado, mostrar imagen del producto disponible (con link a la info)
+//Boton "Buscar nuevo (recargar pagina)"
+//----------------
+
 //----------------
 //HAY QUE CAMBIAR TODO ESTO QUE TENGA ALERT
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
@@ -239,6 +242,8 @@ const sugerirMarca = (indice) => {
 //LLAMO FUNCION -- Completar array de graduaciones disponibles
 completarGraduacionesEsfericasDisponibles();
 
+/*
+
 //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
 asignaGradEsfericaSugerida();
 
@@ -260,3 +265,5 @@ sugerirLenteEsf(
 console.table(graduacionesEsfericasDisponibles);
 console.table(recetaAdaptada);
 console.table(recetaEsfSugerida);
+
+*/
