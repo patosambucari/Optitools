@@ -4,6 +4,9 @@ let divNuevaReceta = document.querySelector("#nuevaReceta");
 let divRecetaGuardada = document.querySelector("#recetaGuardada");
 let divNuevaAdaptacion = document.querySelector("#nuevaAdaptacion");
 let botonRecetaGuardada = document.getElementById("botonRecetaGuardada");
+let divResultados = document.getElementById("resultados");
+let recomendacionOD;
+let recomendacionOI;
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -176,37 +179,40 @@ const asignaGradEsfericaSugerida = () => {
 };
 
 
-//---------------------------------------------FALTA
+
 //DECLARO FUNCION -- Muestro en HTML recomendaciones
 const mostrarRecomendaciones = () => {
 
   //Agrego elementos para mostrar datos
   const agregoElementoRecomendaciones = () => {
-    const nuevoH3Recomendacion = document.createElement("h3");
-    const nuevoH4Recomendacion = document.createElement("h4");
-    const tituloRecomendacion = document.createTextNode(`Se recomendarán lentes para la siguiente receta:`);
-    const datosRecomendacion = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
-    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
-    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
-    let divActual = document.getElementById("resultados");
-    divActual.appendChild(nuevoH3Resultado);
-    divActual.appendChild(nuevoH4Resultado);
+    const nuevoH3RecomendacionOD = document.createElement("h3");
+    const nuevoH3RecomendacionOI = document.createElement("h3");
+    const textoRecomendacionOD = document.createTextNode(recomendacionOD);
+    const textoRecomendacionOI = document.createTextNode(recomendacionOI);
+    nuevoH3RecomendacionOD.appendChild(textoRecomendacionOD);
+    nuevoH3RecomendacionOI.appendChild(textoRecomendacionOI);
+    let divActual = document.getElementById("recomendaciones");
+    divActual.appendChild(nuevoH3RecomendacionOD);
+    divActual.appendChild(nuevoH3RecomendacionOI);
   }
 
-  const agregoBotonesFinal = () => {
-    const botonReiniciar =document.createElement("button");
-    botonReiniciar.innerText="REINICIAR";
-    botonReiniciar.className="main-button";
-    let divActual = document.getElementById("resultados");
-    divActual.appendChild( botonReiniciar);
-    botonReiniciar.addEventListener("click", ()=> {
+  const agregoBotonFinal = () => {
+    const botonVolverAEmpezar =document.createElement("button");
+    botonVolverAEmpezar.innerText="VOLVER A EMPEZAR";
+    botonVolverAEmpezar.className="main-button";
+    let divActual = document.getElementById("recomendaciones");
+    divActual.appendChild(botonVolverAEmpezar);
+    botonVolverAEmpezar.addEventListener("click", ()=> {
       window.location.reload()
     });
   }
-}
-//---------------------------------------------FALTA
 
-//DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
+  agregoElementoRecomendaciones();
+  agregoBotonFinal();
+}
+
+
+//DECLARO FUNCION -- Llama a las funciones necesarias para calcular recomendacion
 const mostrarDatosAUtilizar = () => {
 
   //Agrego elementos para mostrar datos
@@ -217,41 +223,44 @@ const mostrarDatosAUtilizar = () => {
     const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
     nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
     nuevoH4Resultado.appendChild(datosRecetaAdaptada);
-    let divActual = document.getElementById("resultados");
-    divActual.appendChild(nuevoH3Resultado);
-    divActual.appendChild(nuevoH4Resultado);
+    divResultados.appendChild(nuevoH3Resultado);
+    divResultados.appendChild(nuevoH4Resultado);
   }
 
   const agregoBotonesFinal = () => {
     const botonReiniciar =document.createElement("button");
     botonReiniciar.innerText="REINICIAR";
     botonReiniciar.className="main-button";
-    let divActual = document.getElementById("resultados");
-    divActual.appendChild( botonReiniciar);
+    divResultados.appendChild( botonReiniciar);
     botonReiniciar.addEventListener("click", ()=> {
       window.location.reload()
     });
+
     const botonConfirmar =document.createElement("button");
     botonConfirmar.innerText="CONFIRMAR";
     botonConfirmar.className="main-button";
-    divActual.appendChild(botonConfirmar);
+    divResultados.appendChild(botonConfirmar);
     botonConfirmar.addEventListener("click", ()=> {
         //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
         asignaGradEsfericaSugerida();
 
         //LLAMO FUNCION -- Calculo lente sugerida para ambos ojos
-        sugerirLenteEsf(
+        recomendacionOD = sugerirLenteEsf(
           recetaEsfSugerida.ojo1,
           recetaEsfSugerida.esfOjo1,
           recetaEsfSugerida.cilOjo1,
           recetaEsfSugerida.ejeOjo1
         );
-        sugerirLenteEsf(
+        recomendacionOI = sugerirLenteEsf(
           recetaEsfSugerida.ojo2,
           recetaEsfSugerida.esfOjo2,
           recetaEsfSugerida.cilOjo2,
           recetaEsfSugerida.ejeOjo2
         );
+        
+        divResultados.style.display="none";
+
+        mostrarRecomendaciones();
 
         //PRUEBAS CONSOLA
         console.table(graduacionesEsfericasDisponibles);
@@ -264,14 +273,12 @@ const mostrarDatosAUtilizar = () => {
   agregoBotonesFinal();
 }
 
-//----------------
-//HAY QUE CAMBIAR TODO ESTO QUE TENGA ALERT
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
   if (esf !== null) {
     //Si la graduación sugerida es mayor a 15.00 o menor a -20.00, no hay graduaciones disponibles
     if (esf > 15.0 || esf < -20.0) {
-      alert(
+      return(
         `La graduación recomendada para el ${ojo} es ${esf.toFixed(
           2
         )} ${cil.toFixed(
@@ -279,21 +286,20 @@ const sugerirLenteEsf = (ojo, esf, cil, eje) => {
         )} x ${eje}º. \nNo hay lentes esféricas disponibles para esta graduación.`
       );
     } else {
-      alert(
-        `Lente recomendada para el ${ojo}: ${sugerirMarca(
+      return(
+        `Lente recomendada para el ${ojo}:\n ${sugerirMarca(
           buscaEsfSugeridoEntreDisponibles(esf)
         )}`
       );
     }
   } else {
     if (cil !== null) {
-      alert(
+      return(
         `Debido al alto poder cilindrico, no se recomiendan lentes esféricas para el ${ojo}.\nSe sugiere adaptar lentes tóricas`
       );
     }
   }
 };
-//----------------
 
 //DECLARO FUNCION -- Devolver marcas recomendadas de acuerdo a la graduación esférica sugerida
 const buscaEsfSugeridoEntreDisponibles = (esfABuscar) => {
@@ -342,6 +348,7 @@ botonRecetaGuardada.addEventListener("click", (evt)=>{
 //----------------
 //AGREGAR A FUTURO:
 //Ingreso de nuevas recetas
+//Mejorar visualización de resultados
 //Mostrar imagenes de las marcas recomendadas con link a su descripcion
 //----------------
 

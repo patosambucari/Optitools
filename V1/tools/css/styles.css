@@ -41,7 +41,8 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 200px;
-  margin-left: 10px;}
+  margin-left: 10px;
+}
 
 .main-button{
   margin-top: 10px;
@@ -151,4 +152,24 @@ p {
 .iconSelector{
   width: 150px;
   padding-bottom: -50px;
+}
+
+
+
+#recomendaciones > h3 {
+  font-family: "Poppins", sans-serif;
+  color:black;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+#recomendaciones > h4 {
+  font-family: "Poppins", sans-serif;
+  color: #047004;
+  margin-left: 10px;
+}
+#recomendaciones > .main-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  margin-left: 10px;
 }
