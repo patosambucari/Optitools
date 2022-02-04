@@ -3,7 +3,7 @@ let divSelectores = document.querySelector("#selectores");
 let divNuevaReceta = document.querySelector("#nuevaReceta");
 let divRecetaGuardada = document.querySelector("#recetaGuardada");
 let divNuevaAdaptacion = document.querySelector("#nuevaAdaptacion");
-
+let botonRecetaGuardada = document.getElementById("botonRecetaGuardada");
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -20,11 +20,19 @@ window.addEventListener("storage", ()=> {
 })
 
 //Creo objeto Recepta Adaptada con la información del Local Storage
-//VER DE DONDE VIENE RECETA ADAPTADA
-//recetaAdaptada=new Receta(JSON.parse(localStorage.getItem("recetaAdaptada")));
-recetaAdaptada = JSON.parse(localStorage.getItem("recetaAdaptada")); 
-//console.log(localStorage.getItem("recetaAdaptada"));
-console.log(recetaAdaptada);
+let recetaGuardada = JSON.parse(localStorage.getItem("recetaAdaptada"));
+const recetaAdaptada = new Receta(
+  "OD",
+  recetaGuardada.esfOjo1,
+  recetaGuardada.cilOjo1,
+  recetaGuardada.ejeOjo1,
+  "OI",
+  recetaGuardada.esfOjo2,
+  recetaGuardada.cilOjo2,
+  recetaGuardada.ejeOjo2
+); 
+//Recupero Ojo a Calcular
+ojoACalcular = localStorage.getItem("ojoACalcular");
 
 //Clase Graduacion Esferica
 //Para crear objetos "graduación" que estarán contenids en el array de graduaciones disponibles
@@ -168,13 +176,93 @@ const asignaGradEsfericaSugerida = () => {
 };
 
 
-//----------------
-//AHORA FALTA:
-//Tomar la receta que se va a usar para el recomendador (mostrarla y preguntar si desea continuar)
-//Ejecutar el recomendador --> Ocultar los otros divs y mostrar el resultado
-//De acuerdo al resultado ingresado, mostrar imagen del producto disponible (con link a la info)
-//Boton "Buscar nuevo (recargar pagina)"
-//----------------
+//---------------------------------------------FALTA
+//DECLARO FUNCION -- Muestro en HTML recomendaciones
+const mostrarRecomendaciones = () => {
+
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecomendaciones = () => {
+    const nuevoH3Recomendacion = document.createElement("h3");
+    const nuevoH4Recomendacion = document.createElement("h4");
+    const tituloRecomendacion = document.createTextNode(`Se recomendarán lentes para la siguiente receta:`);
+    const datosRecomendacion = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
+    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(nuevoH3Resultado);
+    divActual.appendChild(nuevoH4Resultado);
+  }
+
+  const agregoBotonesFinal = () => {
+    const botonReiniciar =document.createElement("button");
+    botonReiniciar.innerText="REINICIAR";
+    botonReiniciar.className="main-button";
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild( botonReiniciar);
+    botonReiniciar.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+  }
+}
+//---------------------------------------------FALTA
+
+//DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
+const mostrarDatosAUtilizar = () => {
+
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecetaNueva = () => {
+    const nuevoH3Resultado = document.createElement("h3");
+    const nuevoH4Resultado = document.createElement("h4");
+    const tituloRecetaAdaptada = document.createTextNode(`Se recomendarán lentes para la siguiente receta:`);
+    const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
+    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(nuevoH3Resultado);
+    divActual.appendChild(nuevoH4Resultado);
+  }
+
+  const agregoBotonesFinal = () => {
+    const botonReiniciar =document.createElement("button");
+    botonReiniciar.innerText="REINICIAR";
+    botonReiniciar.className="main-button";
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild( botonReiniciar);
+    botonReiniciar.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+    const botonConfirmar =document.createElement("button");
+    botonConfirmar.innerText="CONFIRMAR";
+    botonConfirmar.className="main-button";
+    divActual.appendChild(botonConfirmar);
+    botonConfirmar.addEventListener("click", ()=> {
+        //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
+        asignaGradEsfericaSugerida();
+
+        //LLAMO FUNCION -- Calculo lente sugerida para ambos ojos
+        sugerirLenteEsf(
+          recetaEsfSugerida.ojo1,
+          recetaEsfSugerida.esfOjo1,
+          recetaEsfSugerida.cilOjo1,
+          recetaEsfSugerida.ejeOjo1
+        );
+        sugerirLenteEsf(
+          recetaEsfSugerida.ojo2,
+          recetaEsfSugerida.esfOjo2,
+          recetaEsfSugerida.cilOjo2,
+          recetaEsfSugerida.ejeOjo2
+        );
+
+        //PRUEBAS CONSOLA
+        console.table(graduacionesEsfericasDisponibles);
+        console.table(recetaAdaptada);
+        console.table(recetaEsfSugerida);    
+    });
+  }
+  
+  agregoElementoRecetaNueva();
+  agregoBotonesFinal();
+}
 
 //----------------
 //HAY QUE CAMBIAR TODO ESTO QUE TENGA ALERT
@@ -242,28 +330,18 @@ const sugerirMarca = (indice) => {
 //LLAMO FUNCION -- Completar array de graduaciones disponibles
 completarGraduacionesEsfericasDisponibles();
 
-/*
 
-//LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
-asignaGradEsfericaSugerida();
+//Accion boton selector RECETA GUARDADA
+botonRecetaGuardada.addEventListener("click", (evt)=>{
+  evt.preventDefault;
+  mostrarDatosAUtilizar();
+  divSelectores.style.display="none";
+})
 
-//LLAMO FUNCION -- Calculo lente sugerida para ambos ojos
-sugerirLenteEsf(
-  recetaEsfSugerida.ojo1,
-  recetaEsfSugerida.esfOjo1,
-  recetaEsfSugerida.cilOjo1,
-  recetaEsfSugerida.ejeOjo1
-);
-sugerirLenteEsf(
-  recetaEsfSugerida.ojo2,
-  recetaEsfSugerida.esfOjo2,
-  recetaEsfSugerida.cilOjo2,
-  recetaEsfSugerida.ejeOjo2
-);
 
-//PRUEBAS CONSOLA
-console.table(graduacionesEsfericasDisponibles);
-console.table(recetaAdaptada);
-console.table(recetaEsfSugerida);
+//----------------
+//AGREGAR A FUTURO:
+//Ingreso de nuevas recetas
+//Mostrar imagenes de las marcas recomendadas con link a su descripcion
+//----------------
 
-*/

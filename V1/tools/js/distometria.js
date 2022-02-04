@@ -339,6 +339,7 @@ const distometria = () => {
   //Almaceno en local storage las recetas
   localStorage.setItem("recetaOriginal", JSON.stringify(recetaOriginal));
   localStorage.setItem("recetaAdaptada", JSON.stringify(recetaAdaptada));
+  localStorage.setItem("ojoACalcular", ojoACalcular);
 };
 
 
