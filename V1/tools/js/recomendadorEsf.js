@@ -1,19 +1,13 @@
 //CapturoElementos
-let divSelectores = document.querySelector("#selectores");
-let divNuevaReceta = document.querySelector("#nuevaReceta");
-let divRecetaGuardada = document.querySelector("#recetaGuardada");
-let divNuevaAdaptacion = document.querySelector("#nuevaAdaptacion");
-let botonRecetaGuardada = document.getElementById("botonRecetaGuardada");
-let divResultados = document.getElementById("resultados");
 let recomendacionOD;
 let recomendacionOI;
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
   if(localStorage.getItem("recetaAdaptada") === null){
-    divRecetaGuardada.style.display="none";
+    $("#recetaGuardada").css("display","none");
   } else {
-    divRecetaGuardada.style.display="block";
+    $("#recetaGuardada").css("display","block");
   }
 })
 
@@ -223,15 +217,15 @@ const mostrarDatosAUtilizar = () => {
     const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
     nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
     nuevoH4Resultado.appendChild(datosRecetaAdaptada);
-    divResultados.appendChild(nuevoH3Resultado);
-    divResultados.appendChild(nuevoH4Resultado);
+    $("#resultados").append(nuevoH3Resultado);
+    $("#resultados").append(nuevoH4Resultado);
   }
 
   const agregoBotonesFinal = () => {
     const botonReiniciar =document.createElement("button");
     botonReiniciar.innerText="REINICIAR";
     botonReiniciar.className="main-button";
-    divResultados.appendChild( botonReiniciar);
+    $("#resultados").append(botonReiniciar);
     botonReiniciar.addEventListener("click", ()=> {
       window.location.reload()
     });
@@ -239,7 +233,7 @@ const mostrarDatosAUtilizar = () => {
     const botonConfirmar =document.createElement("button");
     botonConfirmar.innerText="CONFIRMAR";
     botonConfirmar.className="main-button";
-    divResultados.appendChild(botonConfirmar);
+    $("#resultados").append(botonConfirmar);
     botonConfirmar.addEventListener("click", ()=> {
         //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
         asignaGradEsfericaSugerida();
@@ -258,7 +252,7 @@ const mostrarDatosAUtilizar = () => {
           recetaEsfSugerida.ejeOjo2
         );
         
-        divResultados.style.display="none";
+        $("#resultados").css("display", "none");
 
         mostrarRecomendaciones();
 
@@ -338,10 +332,10 @@ completarGraduacionesEsfericasDisponibles();
 
 
 //Accion boton selector RECETA GUARDADA
-botonRecetaGuardada.addEventListener("click", (evt)=>{
+$("#botonRecetaGuardada").click((evt) => {
   evt.preventDefault;
   mostrarDatosAUtilizar();
-  divSelectores.style.display="none";
+  $("#selectores").css("display", "none");
 })
 
 
