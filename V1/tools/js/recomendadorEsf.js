@@ -5,9 +5,9 @@ let recomendacionOI;
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
   if(localStorage.getItem("recetaAdaptada") === null){
-    $("#recetaGuardada").css("display","none");
+    $("#recetaGuardada").fadeOut();
   } else {
-    $("#recetaGuardada").css("display","block");
+    $("#recetaGuardada").fadeIn();
   }
 })
 
@@ -185,9 +185,10 @@ const mostrarRecomendaciones = () => {
     const textoRecomendacionOI = document.createTextNode(recomendacionOI);
     nuevoH3RecomendacionOD.appendChild(textoRecomendacionOD);
     nuevoH3RecomendacionOI.appendChild(textoRecomendacionOI);
-    let divActual = document.getElementById("recomendaciones");
-    divActual.appendChild(nuevoH3RecomendacionOD);
-    divActual.appendChild(nuevoH3RecomendacionOI);
+    $("#recomendaciones").hide()
+      .append(nuevoH3RecomendacionOD)
+      .append(nuevoH3RecomendacionOI)
+      .slideDown(1000);    
   }
 
   const agregoBotonFinal = () => {
@@ -252,7 +253,7 @@ const mostrarDatosAUtilizar = () => {
           recetaEsfSugerida.ejeOjo2
         );
         
-        $("#resultados").css("display", "none");
+        $("#resultados").slideUp(1000);
 
         mostrarRecomendaciones();
 
@@ -335,7 +336,7 @@ completarGraduacionesEsfericasDisponibles();
 $("#botonRecetaGuardada").click((evt) => {
   evt.preventDefault;
   mostrarDatosAUtilizar();
-  $("#selectores").css("display", "none");
+  $("#selectores").slideUp(1000);
 })
 
 
