@@ -1,21 +1,14 @@
 //CapturoElementos
 let recomendacionOD;
 let recomendacionOI;
-let graduacionesEsfericasDisponibles;
 
-//Obtengo graduaciones disponibles de archivo JSON
-//Accedo con AJAX a JSON local
 const URLGET = "./graduacionesEsf.json";
-$.ajax({
-  type: "GET",
-  url: URLGET,
-  //Seteo la consulta como sincrona para poder acceder a los datos
-  async: false,
-  success : function (resultado) {
-    graduacionesEsfericasDisponibles=resultado;
+$.get(URLGET, function (respuesta, estado) {
+  if(estado === "success"){
+      let misDatos = respuesta;
+      console.table(misDatos);
   }
-})
-//console.table(graduacionesEsfericasDisponibles);
+});
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -46,10 +39,79 @@ const recetaAdaptada = new Receta(
 //Recupero Ojo a Calcular
 ojoACalcular = localStorage.getItem("ojoACalcular");
 
+//Clase Graduacion Esferica
+//Para crear objetos "graduación" que estarán contenidos en el array de graduaciones disponibles
+class GraduacionEsf {
+  constructor(esf, cil, eje, marcasDisponibles) {
+    this.esf = esf;
+    this.cil = cil;
+    this.eje = eje;
+    this.marcasDisponibles = marcasDisponibles;
+  }
+}
 
 //Creo instancia Receta Sugerida (de tipo Receta)
 //Aqui se almacenará la receta sugerida
 const recetaEsfSugerida = new Receta("OD", null, -0.0, 0, "OI", null, -0.0, 0);
+
+//Creo Array para almacenar las graduaciones disponibles
+const graduacionesEsfericasDisponibles = new Array(GraduacionEsf);
+
+//DECLARO FUNCION -- Lleno el array con las graduaciones y marcas disponibles
+//De acuerdo a las especificaciones de los distintos fabricantes
+const completarGraduacionesEsfericasDisponibles = () => {
+  for (let esf = -20.0; esf <= -6.5; esf += 0.5) {
+    if (esf >= -20.0 && esf < -12.0) {
+      graduacionesEsfericasDisponibles.push(
+        new GraduacionEsf(esf, -0.0, 0, "Biofinity XR, Proclear")
+      );
+    } else if (esf >= -12.0 && esf < -10.0) {
+      graduacionesEsfericasDisponibles.push(
+        new GraduacionEsf(esf, -0.0, 0, "Air Optix, Avaira, Biofinity")
+      );
+    } else if (esf >= -10.0 && esf <= -6.5) {
+      graduacionesEsfericasDisponibles.push(
+        new GraduacionEsf(
+          esf,
+          -0.0,
+          0,
+          "Air Optix, Avaira, Biofinity, Biomedics, Soflens59"
+        )
+      );
+    }
+  }
+  for (let esf = -6.0; esf <= -0.25; esf += 0.25) {
+    graduacionesEsfericasDisponibles.push(
+      new GraduacionEsf(
+        esf,
+        -0.0,
+        0,
+        "Air Optix, Avaira, Biofinity, Biomedics, Soflens59"
+      )
+    );
+  }
+  for (let esf = +0.25; esf <= 6.0; esf += 0.25) {
+    graduacionesEsfericasDisponibles.push(
+      new GraduacionEsf(
+        esf,
+        -0.0,
+        0,
+        "Air Optix, Avaira, Biofinity, Biomedics, Soflens59"
+      )
+    );
+  }
+  for (let esf = 6.5; esf <= 15.0; esf += 0.5) {
+    if (esf >= 6.5 && esf <= 8.0) {
+      graduacionesEsfericasDisponibles.push(
+        new GraduacionEsf(esf, -0.0, 0, "Air Optix, Avaira, Biofinity")
+      );
+    } else if (esf > 8.0 && esf <= 15.0) {
+      graduacionesEsfericasDisponibles.push(
+        new GraduacionEsf(esf, -0.0, 0, "Biofinity XR, Proclear")
+      );
+    }
+  }
+};
 
 //DECLARO FUNCION -- Calculo graduacion esferica sugerida de acuerdo al valor del cilindro
 const calcularEsfSugerido = (esf, cil) => {
@@ -117,6 +179,8 @@ const asignaGradEsfericaSugerida = () => {
     recetaEsfSugerida.ejeOjo2 = recetaAdaptada.ejeOjo2;
   }
 };
+
+
 
 //DECLARO FUNCION -- Muestro en HTML recomendaciones
 const mostrarRecomendaciones = () => {
@@ -271,6 +335,9 @@ const sugerirMarca = (indice) => {
     graduacionesEsfericasDisponibles[indice].marcasDisponibles
   }`;
 };
+
+//LLAMO FUNCION -- Completar array de graduaciones disponibles
+completarGraduacionesEsfericasDisponibles();
 
 //Accion boton selector RECETA GUARDADA
 $("#botonRecetaGuardada").click((evt) => {
