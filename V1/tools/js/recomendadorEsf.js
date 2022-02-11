@@ -331,7 +331,6 @@ const sugerirMarca = (indice) => {
 //LLAMO FUNCION -- Completar array de graduaciones disponibles
 completarGraduacionesEsfericasDisponibles();
 
-
 //Accion boton selector RECETA GUARDADA
 $("#botonRecetaGuardada").click((evt) => {
   evt.preventDefault;
