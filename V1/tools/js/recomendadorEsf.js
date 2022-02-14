@@ -1,7 +1,10 @@
-//CapturoElementos
+//Variables Globales
 let recomendacionOD;
 let recomendacionOI;
 let graduacionesEsfericasDisponibles;
+let marcasEncontradas ="";
+let marcasEncontradasArr = [];
+let marcasAMostrarArr = [];
 
 //Obtengo graduaciones disponibles de archivo JSON
 //Accedo con AJAX a JSON local
@@ -132,7 +135,52 @@ const mostrarRecomendaciones = () => {
     $("#recomendaciones").hide()
       .append(nuevoH3RecomendacionOD)
       .append(nuevoH3RecomendacionOI)
-      .slideDown(1000);    
+      .slideDown(1000, ()=>{
+        $("#gridImagenes").slideDown(1000);
+      });    
+  }
+
+  const agregoImagenes = () => {
+    //Se agregara bajo las recomendaciones, una imagen de cada marca de lentes sugerida
+    //con enlace a su información
+    $("#recomendaciones").append($("<h3 class='subtitulo'>Hacer click en la lente para más información</h3>"));
+    $("#recomendaciones").append($("<div class='container' id='gridImagenes' style='display:none'></div>"));
+    $("#gridImagenes").append($("<tr class='row' id='fila1'></div>"));
+    //Modifico el array de graduaciones a mostrar, de acuerdo a la imagen
+    for (let i = 0; i < marcasAMostrarArr.length; i++){
+      switch (marcasAMostrarArr[i]){
+        case "Biofinity XR":
+          marcasAMostrarArr[i] = "biofinityxr";
+          break;
+        case "Proclear":
+          marcasAMostrarArr[i] = "proclearsph";
+          break;
+        case "Avaira":
+          marcasAMostrarArr[i] = "avaira";
+          break;
+        case "Biomedics":
+          marcasAMostrarArr[i] = "biomed";
+          break;
+        case "Biofinity":
+          marcasAMostrarArr[i] = "biofinity";
+          break;
+        case "Soflens59":
+          marcasAMostrarArr[i] = "soflens59";
+          break;
+        case "Air Optix":
+          marcasAMostrarArr[i] = "aohy";
+          break;        
+        case "":
+          marcasAMostrarArr.pop();
+          break;
+      }
+    }
+    console.table(marcasAMostrarArr);
+    
+    //Muestro la imagen de cada marca de lentes sugerida
+    for(let i = 0; i < marcasAMostrarArr.length; i++){
+        $("#gridImagenes").append($("<a href='https://imagineone.com.ar/producto/"+marcasAMostrarArr[i]+"/' target='_blank'><img id='"+marcasAMostrarArr[i]+"'src='../assets/images/lentes/"+marcasAMostrarArr[i]+".png' width=250rem></a>"));
+    }
   }
 
   const agregoBotonFinal = () => {
@@ -147,6 +195,7 @@ const mostrarRecomendaciones = () => {
   }
 
   agregoElementoRecomendaciones();
+  agregoImagenes();
   agregoBotonFinal();
 }
 
@@ -263,6 +312,15 @@ const buscaEsfSugeridoEntreDisponibles = (esfABuscar) => {
 
 //DECLARO FUNCION -- Sugerir graduación y marcas de acuerdo al indice obtenido
 const sugerirMarca = (indice) => {
+  //Obtengo marcas que se recomendaran
+  marcasEncontradas += (graduacionesEsfericasDisponibles[indice].marcasDisponibles)+", ";
+  console.log(marcasEncontradas);
+  marcasEncontradasArr = marcasEncontradas.split(", ");
+  console.table(marcasEncontradasArr);
+  marcasAMostrarArr =[...new Set(marcasEncontradasArr)];
+  console.table(marcasAMostrarArr);
+
+  //Devuelvo texto a mostrar
   return `${graduacionesEsfericasDisponibles[indice].esf.toFixed(
     2
   )} ${graduacionesEsfericasDisponibles[indice].cil.toFixed(2)} x ${
@@ -270,6 +328,7 @@ const sugerirMarca = (indice) => {
   }º \nMarcas disponibles: ${
     graduacionesEsfericasDisponibles[indice].marcasDisponibles
   }`;
+
 };
 
 //Accion boton selector RECETA GUARDADA
@@ -284,6 +343,6 @@ $("#botonRecetaGuardada").click((evt) => {
 //AGREGAR A FUTURO:
 //Ingreso de nuevas recetas
 //Mejorar visualización de resultados
-//Mostrar imagenes de las marcas recomendadas con link a su descripcion
+//Ver error en OD cuando solo elijo OI
 //----------------
 

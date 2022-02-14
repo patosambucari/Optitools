@@ -154,8 +154,6 @@ p {
   padding-bottom: -50px;
 }
 
-
-
 #recomendaciones > h3 {
   font-family: "Poppins", sans-serif;
   color:black;
@@ -172,4 +170,16 @@ p {
   margin-bottom: 10px;
   width: 200px;
   margin-left: 10px;
+}
+
+.container{
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+.row>.col{
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
 }
