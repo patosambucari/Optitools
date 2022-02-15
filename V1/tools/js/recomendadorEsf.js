@@ -18,7 +18,6 @@ $.ajax({
     graduacionesEsfericasDisponibles=resultado;
   }
 })
-//console.table(graduacionesEsfericasDisponibles);
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   }
 })
 
-//Refresco la pagina si se actualiza el local storage
+//Refresco la pagina si se actualiza el local storage, para asi mostrar RECETA GUARDADA
 window.addEventListener("storage", ()=> {
   window.location.reload();
 })
@@ -46,6 +45,7 @@ const recetaAdaptada = new Receta(
   recetaGuardada.cilOjo2,
   recetaGuardada.ejeOjo2
 ); 
+
 //Recupero Ojo a Calcular
 ojoACalcular = localStorage.getItem("ojoACalcular");
 
@@ -140,6 +140,7 @@ const mostrarRecomendaciones = () => {
       });    
   }
 
+  //Agrego imagenes de las lentes sugeridas
   const agregoImagenes = () => {
     //Se agregara bajo las recomendaciones, una imagen de cada marca de lentes sugerida
     //con enlace a su información
@@ -183,6 +184,7 @@ const mostrarRecomendaciones = () => {
     }
   }
 
+  //Agrego botones al final
   const agregoBotonFinal = () => {
     const botonVolverAEmpezar =document.createElement("button");
     botonVolverAEmpezar.innerText="VOLVER A EMPEZAR";
@@ -194,11 +196,11 @@ const mostrarRecomendaciones = () => {
     });
   }
 
+  //Ejecuto las 3 funciones juntas
   agregoElementoRecomendaciones();
   agregoImagenes();
   agregoBotonFinal();
 }
-
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para calcular recomendacion
 const mostrarDatosAUtilizar = () => {
@@ -263,6 +265,7 @@ const mostrarDatosAUtilizar = () => {
 
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
+  console.table(recetaAdaptada);
   if (esf !== null) {
     //Si la graduación sugerida es mayor a 15.00 o menor a -20.00, no hay graduaciones disponibles
     if (esf > 15.0 || esf < -20.0) {
@@ -280,13 +283,11 @@ const sugerirLenteEsf = (ojo, esf, cil, eje) => {
         )}`
       );
     }
-  } else {
-    if (cil !== null) {
+  } else if (cil !== null) {
       return(
         `Debido al alto poder cilindrico, no se recomiendan lentes esféricas para el ${ojo}.\nSe sugiere adaptar lentes tóricas`
       );
-    }
-  }
+  } else return "";
 };
 
 //DECLARO FUNCION -- Devolver marcas recomendadas de acuerdo a la graduación esférica sugerida
@@ -314,11 +315,10 @@ const buscaEsfSugeridoEntreDisponibles = (esfABuscar) => {
 const sugerirMarca = (indice) => {
   //Obtengo marcas que se recomendaran
   marcasEncontradas += (graduacionesEsfericasDisponibles[indice].marcasDisponibles)+", ";
-  console.log(marcasEncontradas);
+  //Separo marcas en un array
   marcasEncontradasArr = marcasEncontradas.split(", ");
-  console.table(marcasEncontradasArr);
+  //Elimino marcas duplicadas
   marcasAMostrarArr =[...new Set(marcasEncontradasArr)];
-  console.table(marcasAMostrarArr);
 
   //Devuelvo texto a mostrar
   return `${graduacionesEsfericasDisponibles[indice].esf.toFixed(
@@ -343,6 +343,5 @@ $("#botonRecetaGuardada").click((evt) => {
 //AGREGAR A FUTURO:
 //Ingreso de nuevas recetas
 //Mejorar visualización de resultados
-//Ver error en OD cuando solo elijo OI
 //----------------
 
