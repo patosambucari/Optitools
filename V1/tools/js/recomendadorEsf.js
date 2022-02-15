@@ -343,5 +343,6 @@ $("#botonRecetaGuardada").click((evt) => {
 //AGREGAR A FUTURO:
 //Ingreso de nuevas recetas
 //Mejorar visualización de resultados
+//Agregar boton para enviar pedido
 //----------------
 

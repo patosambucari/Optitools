@@ -1,6 +1,5 @@
 //Declaro Variables globales
 let ojoACalcular = "ao";
-let distanciaVertice;
 
  //Creo instancias Receta Original y adaptada
   const recetaOriginal = new Receta(
@@ -14,7 +13,7 @@ let distanciaVertice;
     null
   );
   
-  const recetaAdaptada = new Receta(
+  const recetaInvertida = new Receta(
     "OD",
     null,
     null,
@@ -180,20 +179,6 @@ campoEjeOi.addEventListener("keyup", () => {
   } 
 })
 
-// Validacion campo Distancia al Vertice
-campoDistVertice.addEventListener("keyup", () => {
-  if (campoDistVertice.value < 13 || campoDistVertice.value > 17){
-    campoDistVertice.style.backgroundColor="red";
-    subtextoDistVertice.innerHTML="Ingrese una distancia válida (entre 13 y 17)";
-    subtextoDistVertice.style.color="red";
-    validDistVertice = false;
-  } else{
-    campoDistVertice.style.backgroundColor="lightgreen";
-    subtextoDistVertice.innerHTML="¡OK!";
-    subtextoDistVertice.style.color="darkgreen";
-    validDistVertice = true;
-  } 
-})
 //------FIN VALIDACIONES EN CAMBIOS------
 
 
@@ -210,7 +195,6 @@ const ingresoDatosReceta = () => {
     recetaOriginal.cilOjo2 = Number(campoCilOi.value)/100;
     recetaOriginal.ejeOjo2 = Number(campoEjeOi.value);
   }
-  distanciaVertice = Number(campoDistVertice.value);
 };
 
 //------VALIDACIONES EN ENVIO------
@@ -253,11 +237,6 @@ if (ojoACalcular == "oi" || ojoACalcular == "ao"){
   }
 }
 
-//Valido que la distancia al vertice sea correcta
-console.log(validDistVertice);
-if (validDistVertice == false) {
-  mensajeErrorValidacion.innerHTML="&#9888 Hay datos incorrectos &#9888";
-}
 
 if (
   ((ojoACalcular == "od") && validOD && validVaciosOD)
@@ -269,13 +248,11 @@ if (
       mensajeErrorValidacion.innerHTML="";
       ingresoDatosReceta();
       $("#ingresoReceta").slideUp(1000);
-      runDistometria();
+      runTransposicion();
       console.table(recetaOriginal); //para prueba
     } 
 }
 }
-
-
 
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
@@ -286,68 +263,60 @@ const redondearACuartos = (num) => {
   return num;
 };
 
-/*DECLARO FUNCION -- Calcular Distometria
-Se calcula distometría entera según la formula DC = D / (1-xD)
-DC = Receta adaptada a Lentes de Contacto
-D = Receta de lentes aereos
-x = Distancia al vértice (en metros)
+/*DECLARO FUNCION -- Calcular Transposición
+Nuevo ESF: Esferico original + Cilindrico original
+Nuevo CIL: Cilindrico original * -1
+Nuevo EJE: Eje original +/- 90º
 */
-const distometria = () => {
+const transposicion = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
-    recetaAdaptada.esfOjo1 = redondearACuartos(
+    recetaInvertida.esfOjo1 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.esfOjo1) /
-          (1 -
-            (parseFloat(distanciaVertice) / 1000) *
-              parseFloat(recetaOriginal.esfOjo1))) *
+        (parseFloat(recetaOriginal.esfOjo1) +
+              parseFloat(recetaOriginal.cilOjo1)) *
           100
       ) / 100
     );
-    recetaAdaptada.cilOjo1 = redondearACuartos(
+    recetaInvertida.cilOjo1 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo1) /
-          (1 -
-            (parseFloat(distanciaVertice) / 1000) *
-              parseFloat(recetaOriginal.cilOjo1))) *
+        -(parseFloat(recetaOriginal.cilOjo1)) *
           100
       ) / 100
     );
-    recetaAdaptada.ejeOjo1 = recetaOriginal.ejeOjo1;
+    if (recetaOriginal.ejeOjo1 <= 90) { 
+        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 + 90;
+      } else if (recetaOriginal.ejeOjo1 > 90) {
+        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 - 90;
+      }
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-    recetaAdaptada.esfOjo2 = redondearACuartos(
+    recetaInvertida.esfOjo2 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.esfOjo2) /
-          (1 -
-            (parseFloat(distanciaVertice) / 1000) *
-              parseFloat(recetaOriginal.esfOjo2))) *
+        (parseFloat(recetaOriginal.esfOjo2) +
+              parseFloat(recetaOriginal.cilOjo2)) *
           100
       ) / 100
     );
-    recetaAdaptada.cilOjo2 = redondearACuartos(
+    recetaInvertida.cilOjo2 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo2) /
-          (1 -
-            (parseFloat(distanciaVertice) / 1000) *
-              parseFloat(recetaOriginal.cilOjo2))) *
+        -(parseFloat(recetaOriginal.cilOjo2)) *
           100
       ) / 100
     );
-    recetaAdaptada.ejeOjo2 = recetaOriginal.ejeOjo2;
-  }
-  
-  //Almaceno en local storage las recetas
-  localStorage.setItem("recetaOriginal", JSON.stringify(recetaOriginal));
-  localStorage.setItem("recetaAdaptada", JSON.stringify(recetaAdaptada));
-  localStorage.setItem("ojoACalcular", ojoACalcular);
+    if (recetaOriginal.ejeOjo2 <= 90) { 
+        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 + 90;
+      } else if (recetaOriginal.ejeOjo2 > 90) {
+        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 - 90;
+      }
+    }
 };
 
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
-const runDistometria = () => {
+const runTransposicion = () => {
   
-  //Calculo distometria sobre receta original
-  distometria();
+  //Calculo transposición sobre receta original
+  transposicion();
 
   //Agrego elementos para mostrar datos
   const agregoElementoRecetaOriginal = () => {
@@ -362,13 +331,13 @@ const runDistometria = () => {
     divActual.appendChild(nuevoH4);
   }
 
-  const agregoElementoRecetaNueva = () => {
+  const agregoElementoRecetaInvertida = () => {
     const nuevoH3Resultado = document.createElement("h3");
     const nuevoH4Resultado = document.createElement("h4");
-    const tituloRecetaAdaptada = document.createTextNode(`La receta adaptada a LC para una distancia al vertice de ${distanciaVertice} es:`);
-    const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
-    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
-    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
+    const tituloRecetaInvertida = document.createTextNode(`La receta expresada en cilíndrico opuesto es:`);
+    const datosRecetaInvertida = document.createTextNode(`${recetaInvertida.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaInvertida);
+    nuevoH4Resultado.appendChild(datosRecetaInvertida);
     let divActual = document.getElementById("resultados");
     divActual.appendChild(nuevoH3Resultado);
     divActual.appendChild(nuevoH4Resultado);
@@ -394,7 +363,7 @@ const runDistometria = () => {
   }
 
   agregoElementoRecetaOriginal();
-  agregoElementoRecetaNueva();
+  agregoElementoRecetaInvertida();
   agregoBotonesFinal();
 
 }
