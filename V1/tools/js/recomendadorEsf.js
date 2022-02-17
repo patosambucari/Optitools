@@ -321,9 +321,9 @@ const sugerirMarca = (indice) => {
   marcasAMostrarArr =[...new Set(marcasEncontradasArr)];
 
   //Devuelvo texto a mostrar
-  return `${graduacionesEsfericasDisponibles[indice].esf.toFixed(
+  return `${recetaEsfSugerida.addSign(graduacionesEsfericasDisponibles[indice].esf.toFixed(
     2
-  )} ${graduacionesEsfericasDisponibles[indice].cil.toFixed(2)} x ${
+  ))} ${recetaEsfSugerida.addSign(graduacionesEsfericasDisponibles[indice].cil.toFixed(2))} x ${
     graduacionesEsfericasDisponibles[indice].eje
   }º \nMarcas disponibles: ${
     graduacionesEsfericasDisponibles[indice].marcasDisponibles

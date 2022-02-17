@@ -86,9 +86,14 @@ p {
   background-color: white;
   margin-left: 0px;
 }
-#ingresoDatos > #botoneraAcciones, #adicion > .labelsFormulario{
+#ingresoDatos > #botoneraAcciones > .labelsFormulario{
   color: black;
 }
+
+#ingresoDatos > #botoneraAcciones> #adicionOCerca> #adicion > .labelsFormulario{
+  color: black;
+}
+
 #ingresoDatos > #botoneraAcciones > .subtexto{
   color: black;
 }
