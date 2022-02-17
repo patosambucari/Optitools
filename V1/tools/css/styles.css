@@ -11,6 +11,7 @@
   font-size: 20px;
   color: #191a20;
   margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -85,7 +86,7 @@ p {
   background-color: white;
   margin-left: 0px;
 }
-#ingresoDatos > #botoneraAcciones > .labelsFormulario{
+#ingresoDatos > #botoneraAcciones, #adicion > .labelsFormulario{
   color: black;
 }
 #ingresoDatos > #botoneraAcciones > .subtexto{
@@ -240,8 +241,14 @@ p {
   font-weight: bold;
 }
 
-#adicion {
+#adicionSelect {
+  border: 2px black solid;
   width: 90px;
   text-align: center;
   margin-bottom: 15px;
+}
+
+#tituloReceta{
+  padding-left: 10px;
+
 }

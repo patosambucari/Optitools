@@ -21,21 +21,29 @@ class Receta {
       this.ejeOjo2 = ejeOjo2;
     }
   
+    //Metodo para agregar signo positivo a graduaciones positivas
+    addSign = (power) => {
+      if (power>0) {
+        return "+"+power;
+      } else return power;
+    }
+
     //Metodo para mostrar los datos de las recetas
     //Solo mostrará los ojos calculados, y ajustará todo a 2 decimales
+    //Tambien fuerza agregar el signo + en caso de ser graduaciones positivas
     muestroDatos = () => {
       if (ojoACalcular == "od") {
-        return `${this.ojo1.toUpperCase()} ${this.esfOjo1.toFixed(
+        return `${this.ojo1.toUpperCase()} ${this.addSign(this.esfOjo1.toFixed(
           2
-        )} ${this.cilOjo1.toFixed(2)} x ${this.ejeOjo1}º`;
+        ))} ${this.addSign(this.cilOjo1.toFixed(2))} x ${this.ejeOjo1}º`;
       } else if (ojoACalcular == "oi") {
-        return `${this.ojo2.toUpperCase()} ${this.esfOjo2.toFixed(
+        return `${this.ojo2.toUpperCase()} ${this.addSign(this.esfOjo2.toFixed(
           2
-        )} ${this.cilOjo2.toFixed(2)} x ${this.ejeOjo2}º`;
+        ))} ${this.addSign(this.cilOjo2.toFixed(2))} x ${this.ejeOjo2}º`;
       } else {
-        return `OD: ${this.esfOjo1.toFixed(2)} ${this.cilOjo1.toFixed(2)} x ${
+        return `OD: ${this.addSign(this.esfOjo1.toFixed(2))} ${this.addSign(this.cilOjo1.toFixed(2))} x ${
           this.ejeOjo1
-        }º \nOI: ${this.esfOjo2.toFixed(2)} ${this.cilOjo2.toFixed(2)} x ${
+        }º \nOI: ${this.addSign(this.esfOjo2.toFixed(2))} ${this.addSign(this.cilOjo2.toFixed(2))} x ${
           this.ejeOjo2
         }º`;
       }

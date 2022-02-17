@@ -1,6 +1,11 @@
 //Declaro Variables globales
 let ojoACalcular = "ao";
 
+//VER COMO OBTENER EL VALOR DEL MENU SELECT
+$("#adicionSelect").on("change", ()=> {
+  console.log($("#adicionSelect").val());
+});
+
  //Creo instancias Receta Original y adaptada
   const recetaOriginal = new Receta(
     "OD",
@@ -13,7 +18,7 @@ let ojoACalcular = "ao";
     null
   );
   
-  const recetaInvertida = new Receta(
+  const recetaCerca = new Receta(
     "OD",
     null,
     null,
@@ -24,7 +29,20 @@ let ojoACalcular = "ao";
     null
   );
 
-//Contenidos Dinámicos
+//Cambia metodo de calculo segun el switch
+let calcularAdicion = false;
+$("#calculaAdd").on("change", ()=> {
+  if (calcularAdicion == false){
+    calcularAdicion = true;
+    $("#adicion").slideUp(500);
+  } else if (calcularAdicion == true){
+    calcularAdicion = false;
+    $("#adicion").slideDown(500);
+  }
+})
+
+
+//CONTENIDOS DINAMICOS
 //Selector de ojo, muestra ingreso de datos de acuerdo a lo seleccionado
 var botonOD = document.getElementById("botonOD");
 var botonOI = document.getElementById("botonOI");
@@ -248,7 +266,7 @@ if (
       mensajeErrorValidacion.innerHTML="";
       ingresoDatosReceta();
       $("#ingresoReceta").slideUp(1000);
-      runTransposicion();
+      runCalcularRecetaCerca();
       console.table(recetaOriginal); //para prueba
     } 
 }
@@ -263,60 +281,52 @@ const redondearACuartos = (num) => {
   return num;
 };
 
-/*DECLARO FUNCION -- Calcular Transposición
-Nuevo ESF: Esferico original + Cilindrico original
-Nuevo CIL: Cilindrico original * -1
-Nuevo EJE: Eje original +/- 90º
+/*DECLARO FUNCION -- Calcular Receta Cerca
+Nuevo ESF: Esferico original + Adicion
+Nuevo CIL: Cilindrico original
+Nuevo EJE: Eje original
 */
-const transposicion = () => {
+const calcularRecetaCerca = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
-    recetaInvertida.esfOjo1 = redondearACuartos(
+    recetaCerca.esfOjo1 = redondearACuartos(
       Math.round(
         (parseFloat(recetaOriginal.esfOjo1) +
-              parseFloat(recetaOriginal.cilOjo1)) *
+              parseFloat($("#adicionSelect").val())) *
           100
       ) / 100
     );
-    recetaInvertida.cilOjo1 = redondearACuartos(
+    recetaCerca.cilOjo1 = redondearACuartos(
       Math.round(
-        -(parseFloat(recetaOriginal.cilOjo1)) *
+        (parseFloat(recetaOriginal.cilOjo1)) *
           100
       ) / 100
     );
-    if (recetaOriginal.ejeOjo1 <= 90) { 
-        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 + 90;
-      } else if (recetaOriginal.ejeOjo1 > 90) {
-        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 - 90;
-      }
+    recetaCerca.ejeOjo1 = recetaOriginal.ejeOjo1;
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-    recetaInvertida.esfOjo2 = redondearACuartos(
+    recetaCerca.esfOjo2 = redondearACuartos(
       Math.round(
         (parseFloat(recetaOriginal.esfOjo2) +
-              parseFloat(recetaOriginal.cilOjo2)) *
+              parseFloat($("#adicionSelect").val())) *
           100
       ) / 100
     );
-    recetaInvertida.cilOjo2 = redondearACuartos(
+    recetaCerca.cilOjo2 = redondearACuartos(
       Math.round(
-        -(parseFloat(recetaOriginal.cilOjo2)) *
+        (parseFloat(recetaOriginal.cilOjo2)) *
           100
       ) / 100
     );
-    if (recetaOriginal.ejeOjo2 <= 90) { 
-        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 + 90;
-      } else if (recetaOriginal.ejeOjo2 > 90) {
-        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 - 90;
-      }
-    }
+    recetaCerca.ejeOjo2 = recetaOriginal.ejeOjo2;
+  }
 };
 
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
-const runTransposicion = () => {
+const runCalcularRecetaCerca = () => {
   
   //Calculo transposición sobre receta original
-  transposicion();
+  calcularRecetaCerca();
 
   //Agrego elementos para mostrar datos
   const agregoElementoRecetaOriginal = () => {
@@ -331,13 +341,13 @@ const runTransposicion = () => {
     divActual.appendChild(nuevoH4);
   }
 
-  const agregoElementoRecetaInvertida = () => {
+  const agregoElementoRecetaCerca = () => {
     const nuevoH3Resultado = document.createElement("h3");
     const nuevoH4Resultado = document.createElement("h4");
-    const tituloRecetaInvertida = document.createTextNode(`La receta expresada en cilíndrico opuesto es:`);
-    const datosRecetaInvertida = document.createTextNode(`${recetaInvertida.muestroDatos()}`);
-    nuevoH3Resultado.appendChild(tituloRecetaInvertida);
-    nuevoH4Resultado.appendChild(datosRecetaInvertida);
+    const tituloRecetaCerca = document.createTextNode(`La receta para vision CERCANA con Add. ${$("#adicionSelect").val()} es:`);
+    const datosRecetaCerca = document.createTextNode(`${recetaCerca.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaCerca);
+    nuevoH4Resultado.appendChild(datosRecetaCerca);
     let divActual = document.getElementById("resultados");
     divActual.appendChild(nuevoH3Resultado);
     divActual.appendChild(nuevoH4Resultado);
@@ -363,7 +373,7 @@ const runTransposicion = () => {
   }
 
   agregoElementoRecetaOriginal();
-  agregoElementoRecetaInvertida();
+  agregoElementoRecetaCerca();
   agregoBotonesFinal();
 
 }

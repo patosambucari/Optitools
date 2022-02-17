@@ -23,7 +23,7 @@
         <div id="switchReceta">
           <span class="labelSwitch">Calcular receta para CERCA</span>
           <label class="toggle">
-            <input type="checkbox">
+            <input type="checkbox" id="calculaAdd">
             <span class="slider"></span>
           </label>
           <span class="labelSwitch">Calcular ADICIÓN</span>
@@ -34,6 +34,7 @@
             <button id="botonAO" class="main-button">AO</button>
             <br/>
         </div>
+        <h2 id="tituloReceta">Graduacion para LEJOS</h2>
         <div id="ingresoDatos">
           <form id="formIngresoDatos">
             <div id="ingresoDatosOd">
@@ -61,29 +62,36 @@
                   <input name="ejeOi" type="number" max="180" min="0" required="yes" id="ejeOi" class="inputsFormulario"><br/>
                   <p id="subtextoEjeOi" class="subtexto">Ingrese eje (0 a 180)</p>
             </div>
-            
-            <div id="botoneraAcciones">
-                <label for="adicion" class="labelsFormulario"> Adición: </label>
-                <select name="adicionSelect" required="yes" id="adicion" class="inputsFormulario">
-                    <option>+0.50</option>
-                    <option>+0.75</option>
-                    <option>+1.00</option>
-                    <option>+1.25</option>
-                    <option>+1.50</option>
-                    <option>+1.50</option>
-                    <option selected>+2.00</option>
-                    <option>+2.25</option>
-                    <option>+2.50</option>
-                    <option>+2.75</option>
-                    <option>+3.00</option>
-                    <option>+3.25</option>
-                    <option>+3.50</option>
-                  </select><br/>
 
+            <div id="botoneraAcciones">
+              <div id="adicionOCerca">
+                <div id="adicion" class="labelsFormulario">  
+                  <label for="adicionSelect" class="labelsFormulario"> Adición: </label>
+                    <select name="adicionSelect" required="yes" id="adicionSelect" class="inputsFormulario">
+                        <option>+0.50</option>
+                        <option>+0.75</option>
+                        <option>+1.00</option>
+                        <option>+1.25</option>
+                        <option>+1.50</option>
+                        <option>+1.50</option>
+                        <option selected>+2.00</option>
+                        <option>+2.25</option>
+                        <option>+2.50</option>
+                        <option>+2.75</option>
+                        <option>+3.00</option>
+                        <option>+3.25</option>
+                        <option>+3.50</option>
+                      </select><br/>
+                    </div>
+                
+
+
+                </div>
+    
                 <button id="botonReset" type="reset" class="main-button">Borrar datos</button>
                 <button id="botonProcesar" type="submit" class="main-button">Procesar</button>
                 <p id ="subtextoValidacion"></p>
-              </div>
+            </div>
           </form>
         </div>
         <div id="resultados"></div>
