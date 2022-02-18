@@ -31,13 +31,16 @@ $("#adicionSelect").on("change", ()=> {
 
 //Cambia metodo de calculo segun el switch
 let calcularAdicion = false;
+$(".graduacionCerca").hide();
 $("#calculaAdd").on("change", ()=> {
   if (calcularAdicion == false){
     calcularAdicion = true;
     $("#adicion").slideUp(500);
+    $(".graduacionCerca").slideDown(500);
   } else if (calcularAdicion == true){
     calcularAdicion = false;
     $("#adicion").slideDown(500);
+    $(".graduacionCerca").slideUp(500);
   }
 })
 
@@ -75,23 +78,29 @@ botonAO.addEventListener("click", (event) => {
 
 //Capturo datos del formulario
 let campoEsfOd = document.querySelector("#esfOd");
+let campoEsfOdCerca = document.querySelector("#esfOdCerca");
 let campoCilOd = document.querySelector("#cilOd");
 let campoEjeOd = document.querySelector("#ejeOd");
 let campoEsfOi = document.querySelector("#esfOi");
+let campoEsfOiCerca = document.querySelector("#esfOiCerca");
 let campoCilOi = document.querySelector("#cilOi");
 let campoEjeOi = document.querySelector("#ejeOi");
 let campoDistVertice = document.querySelector("#distanciaVertice");
 let subtextoEsfOd = document.querySelector("#subtextoEsfOd");
+let subtextoEsfOdCerca = document.querySelector("#subtextoEsfOdCerca");
 let subtextoCilOd = document.querySelector("#subtextoCilOd");
 let subtextoEjeOd = document.querySelector("#subtextoEjeOd");
 let subtextoEsfOi = document.querySelector("#subtextoEsfOi");
+let subtextoEsfOiCerca = document.querySelector("#subtextoEsfOiCerca");
 let subtextoCilOi = document.querySelector("#subtextoCilOi");
 let subtextoEjeOi = document.querySelector("#subtextoEjeOi");
 let subtextoDistVertice = document.querySelector("#subtextoDistanciaVertice");
 let validEsfOD = false;
+let validEsfODCerca = false;
 let validCilOD = false;
 let validEjeOD = false;
 let validEsfOI = false;
+let validEsfOICerca = false;
 let validCilOI = false;
 let validEjeOI = false;
 let validVaciosOD = false;
@@ -118,6 +127,21 @@ campoEsfOd.addEventListener("keyup", () => {
     subtextoEsfOd.innerHTML="¡OK!";
     subtextoEsfOd.style.color="darkgreen";
     validEsfOD = true;
+  }
+})
+
+//campoEsfOdCerca
+campoEsfOdCerca.addEventListener("keyup", () => {
+  if (campoEsfOdCerca.value % 25 != 0 || campoEsfOdCerca.value < campoEsfOd.value){
+    campoEsfOdCerca.style.backgroundColor="red";
+    subtextoEsfOdCerca.innerHTML="Verifique la graduación ingresada";
+    subtextoEsfOdCerca.style.color="red";
+    validEsfODCerca = false;
+  } else if (campoEsfOdCerca.value % 25 == 0 && campoEsfOdCerca.value > campoEsfOd.value){
+    campoEsfOdCerca.style.backgroundColor="lightgreen";
+    subtextoEsfOdCerca.innerHTML="¡OK!";
+    subtextoEsfOdCerca.style.color="darkgreen";
+    validEsfODCerca = true;
   } 
 })
 
@@ -148,6 +172,21 @@ campoEsfOi.addEventListener("keyup", () => {
     subtextoEsfOi.innerHTML="¡OK!";
     subtextoEsfOi.style.color="darkgreen";
     validEsfOI = true;
+  } 
+})
+
+//campoEsfOiCerca
+campoEsfOiCerca.addEventListener("keyup", () => {
+  if (campoEsfOiCerca.value % 25 != 0 || campoEsfOiCerca.value < campoEsfOi.value){
+    campoEsfOiCerca.style.backgroundColor="red";
+    subtextoEsfOiCerca.innerHTML="Verifique la graduación ingresada";
+    subtextoEsfOiCerca.style.color="red";
+    validEsfOICerca = false;
+  } else if (campoEsfOiCerca.value % 25 == 0 && campoEsfOiCerca.value > campoEsfOi.value){
+    campoEsfOiCerca.style.backgroundColor="lightgreen";
+    subtextoEsfOiCerca.innerHTML="¡OK!";
+    subtextoEsfOiCerca.style.color="darkgreen";
+    validEsfOICerca = true;
   } 
 })
 
@@ -218,22 +257,22 @@ const ingresoDatosReceta = () => {
 //------VALIDACIONES EN ENVIO------
 //Validacion campos vacios
 const validoCamposVacios = () => {
-  if (campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
+  if (campoEsfOdCerca.value == "" || campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
       validVaciosOD = false;
   } else validVaciosOD = true;  
-  if (campoEsfOi.value == "" || campoCilOi.value == null || campoEjeOi.value == ""){
+  if (campoEsfOiCerca.value == "" || campoEsfOi.value == "" || campoCilOi.value == null || campoEjeOi.value == ""){
       validVaciosOI = false;
   } else validVaciosOI = true;
 }
 
 //VALIDACION SEGUN OJO A COMPLETAR
-const validacionSegunOjo = () => {
+const validacionSegunOjo = (funcionAEjecutar) => {
 //Valido que todos los campos del OD tengan datos correctos
-if (validEsfOD && validCilOD && validEjeOD) {
+if (validEsfODCerca && validEsfOD && validCilOD && validEjeOD) {
   validOD = true;
 }
 //Valido que todos los campos del OI tengan datos correctos
-if (validEsfOI && validCilOI && validEjeOI) {
+if (validEsfOICerca && validEsfOI && validCilOI && validEjeOI) {
   validOI = true;
 }
 
@@ -266,8 +305,11 @@ if (
       mensajeErrorValidacion.innerHTML="";
       ingresoDatosReceta();
       $("#ingresoReceta").slideUp(1000);
-      runCalcularRecetaCerca();
-      console.table(recetaOriginal); //para prueba
+      if (funcionAEjecutar == "RecetaCerca"){
+        runCalcularRecetaCerca();
+      } else if (funcionAEjecutar == "Adicion"){
+        runcalcularAdicionSobreRecetas();
+      }
     } 
 }
 }
@@ -322,10 +364,10 @@ const calcularRecetaCerca = () => {
 };
 
 
-//DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
+//DECLARO FUNCION -- Llama a las funciones necesarias para calcular CERCA
 const runCalcularRecetaCerca = () => {
   
-  //Calculo transposición sobre receta original
+  //Calculo receta de CERCA en base a receta original y adicion
   calcularRecetaCerca();
 
   //Agrego elementos para mostrar datos
@@ -378,9 +420,130 @@ const runCalcularRecetaCerca = () => {
 
 }
 
+
+/*DECLARO FUNCION -- Calcular Adicion
+Adicion: Esferico Cerca - Esferico Lejos
+*/
+const calcularAdicionSobreRecetas = () => {
+  if (ojoACalcular == "od" || ojoACalcular == "ao") {
+    recetaCerca.esfOjo1 = redondearACuartos(
+      Math.round(
+        (parseFloat(campoEsfOdCerca.value/100)) *
+          100
+      ) / 100
+    );
+    recetaCerca.cilOjo1 = redondearACuartos(
+      Math.round(
+        (parseFloat(recetaOriginal.cilOjo1)) *
+          100
+      ) / 100
+    );
+    recetaCerca.ejeOjo1 = recetaOriginal.ejeOjo1;
+  }
+  if (ojoACalcular == "oi" || ojoACalcular == "ao") {
+    recetaCerca.esfOjo2 = redondearACuartos(
+      Math.round(
+        (parseFloat(campoEsfOiCerca.value/100)) *
+          100
+      ) / 100
+    );
+    recetaCerca.cilOjo2 = redondearACuartos(
+      Math.round(
+        (parseFloat(recetaOriginal.cilOjo2)) *
+          100
+      ) / 100
+    );
+    recetaCerca.ejeOjo2 = recetaOriginal.ejeOjo2;
+  }
+};
+
+
+//DECLARO FUNCION -- Llama a las funciones necesarias para calcular ADICION
+const runcalcularAdicionSobreRecetas = () => {
+  
+  //Calculo ADICION sobre recetas originales
+  calcularAdicionSobreRecetas();
+
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecetaOriginal = () => {
+    const nuevoH3 = document.createElement("h3");
+    const nuevoH4 = document.createElement("h4");
+    const tituloRecetaOriginal = document.createTextNode(`La receta original ingresada es:\n`);
+    const datosRecetaOriginal = document.createTextNode(`${recetaOriginal.muestroDatos()}`);
+    nuevoH3.appendChild(tituloRecetaOriginal);
+    nuevoH4.appendChild(datosRecetaOriginal);
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(nuevoH3);
+    divActual.appendChild(nuevoH4);
+  }
+
+  const agregoElementoRecetaCerca = () => {
+    const nuevoH3Resultado = document.createElement("h3");
+    const nuevoH4Resultado = document.createElement("h4");
+    const tituloRecetaCerca = document.createTextNode(`La receta para vision CERCANA es:`);
+    const datosRecetaCerca = document.createTextNode(`${recetaCerca.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaCerca);
+    nuevoH4Resultado.appendChild(datosRecetaCerca);
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(nuevoH3Resultado);
+    divActual.appendChild(nuevoH4Resultado);
+  }
+
+  const agregoElementoVerAdicion = () => {
+    const nuevoH3ResultadoOd = document.createElement("h3");
+    const nuevoH3ResultadoOi = document.createElement("h3");
+    const tituloAddOd = document.createTextNode(`La ADICIÓN para el OD es: ${recetaOriginal.addSign((recetaCerca.esfOjo1-recetaOriginal.esfOjo1).toFixed(2))}`);
+    const tituloAddOi = document.createTextNode(`La ADICIÓN para el OI es: ${recetaOriginal.addSign((recetaCerca.esfOjo2-recetaOriginal.esfOjo2).toFixed(2))}`);
+    nuevoH3ResultadoOd.appendChild(tituloAddOd);
+    nuevoH3ResultadoOi.appendChild(tituloAddOi);
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(nuevoH3ResultadoOd);
+    divActual.appendChild(nuevoH3ResultadoOi);
+  }
+
+  const agregoBotonesFinal = () => {
+    const botonNuevoCalculo =document.createElement("button");
+    botonNuevoCalculo.innerText="NUEVA RECETA";
+    botonNuevoCalculo.className="main-button";
+    let divActual = document.getElementById("resultados");
+    divActual.appendChild(botonNuevoCalculo);
+    botonNuevoCalculo.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+    const botonCerrarVentana =document.createElement("button");
+    botonCerrarVentana.innerText="CERRAR VENTANA";
+    botonCerrarVentana.className="main-button";
+    divActual.appendChild(botonCerrarVentana);
+    botonCerrarVentana.addEventListener("click", ()=> {
+      window.close()
+    });
+
+  }
+
+  agregoElementoRecetaOriginal();
+  agregoElementoRecetaCerca();
+  agregoElementoVerAdicion();
+  agregoBotonesFinal();
+
+}
+
 //Accion boton PROCESAR
 botonProcesar.addEventListener("click", (event) => {
-  event.preventDefault();
-  validoCamposVacios();
-  validacionSegunOjo();  
+  if (calcularAdicion == false){
+    //Ver lo que tiene que hacer al clickear en PROCESAR
+    event.preventDefault();
+    campoEsfOdCerca = "000";
+    campoEsfOiCerca = "000";
+    validEsfODCerca = true;
+    validEsfOICerca = true;
+    validoCamposVacios();
+    validacionSegunOjo("RecetaCerca");  
+  } else if (calcularAdicion == true) {
+    event.preventDefault();
+    validoCamposVacios();
+    validacionSegunOjo("Adicion");
+  }
 });
+
+//VER PRESENTACION DE LOS DATOS
+//VER VALIDACIONES (AGREGAR O CONTROLAR)
