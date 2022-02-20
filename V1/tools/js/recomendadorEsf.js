@@ -6,7 +6,7 @@ let marcasEncontradas ="";
 let marcasEncontradasArr = [];
 let marcasAMostrarArr = [];
 
-//Obtengo graduaciones disponibles de archivo JSON
+//Obtengo graduaciones ESFERICAS disponibles de archivo JSON
 //Accedo con AJAX a JSON local
 const URLGET = "./graduacionesEsf.json";
 $.ajax({
@@ -21,20 +21,28 @@ $.ajax({
 
 //Oculto opcion RECETA GUARDADA si no existe alguna previamente calculada
 document.addEventListener("DOMContentLoaded", ()=>{
-  if(localStorage.getItem("recetaAdaptada") === null){
+  if(localStorage.getItem("DISTrecetaAdaptada") === null){
     $("#recetaGuardada").fadeOut();
   } else {
     $("#recetaGuardada").fadeIn();
   }
 })
 
+//Oculto Selectores al seleccionar RECETA GUARDADA
+$("#botonRecetaGuardada").click((evt) => {
+  evt.preventDefault;
+  mostrarDatosAUtilizar();
+  $("#selectores").slideUp(1000);
+})
+
+
 //Refresco la pagina si se actualiza el local storage, para asi mostrar RECETA GUARDADA
 window.addEventListener("storage", ()=> {
   window.location.reload();
 })
 
-//Creo objeto Recepta Adaptada con la información del Local Storage
-let recetaGuardada = JSON.parse(localStorage.getItem("recetaAdaptada"));
+//Creo objeto RECETA ADAPTADA con la información del Local Storage
+let recetaGuardada = JSON.parse(localStorage.getItem("DISTrecetaAdaptada"));
 const recetaAdaptada = new Receta(
   "OD",
   recetaGuardada.esfOjo1,
@@ -47,7 +55,7 @@ const recetaAdaptada = new Receta(
 ); 
 
 //Recupero Ojo a Calcular
-ojoACalcular = localStorage.getItem("ojoACalcular");
+ojoACalcular = localStorage.getItem("DISTojoACalcular");
 
 
 //Creo instancia Receta Sugerida (de tipo Receta)
@@ -89,7 +97,7 @@ const calcularEsfSugerido = (esf, cil) => {
   return sugeridaEsferica;
 };
 
-//DECLARO FUNCION -- Funcion para asignar graduacion esferica sugerida, segun los valores de la receta adaptada
+//DECLARO FUNCION -- Funcion para asignar graduacion esferica sugerida, de acuerdo a los valores de la receta adaptada
 const asignaGradEsfericaSugerida = () => {
   if (recetaAdaptada.esfOjo1 !== null) {
     if (Math.abs(recetaAdaptada.cilOjo1) <= 1.75) {
@@ -120,148 +128,6 @@ const asignaGradEsfericaSugerida = () => {
     recetaEsfSugerida.ejeOjo2 = recetaAdaptada.ejeOjo2;
   }
 };
-
-//DECLARO FUNCION -- Muestro en HTML recomendaciones
-const mostrarRecomendaciones = () => {
-
-  //Agrego elementos para mostrar datos
-  const agregoElementoRecomendaciones = () => {
-    const nuevoH3RecomendacionOD = document.createElement("h3");
-    const nuevoH3RecomendacionOI = document.createElement("h3");
-    const textoRecomendacionOD = document.createTextNode(recomendacionOD);
-    const textoRecomendacionOI = document.createTextNode(recomendacionOI);
-    nuevoH3RecomendacionOD.appendChild(textoRecomendacionOD);
-    nuevoH3RecomendacionOI.appendChild(textoRecomendacionOI);
-    $("#recomendaciones").hide()
-      .append(nuevoH3RecomendacionOD)
-      .append(nuevoH3RecomendacionOI)
-      .slideDown(1000, ()=>{
-        $("#gridImagenes").slideDown(1000);
-      });    
-  }
-
-  //Agrego imagenes de las lentes sugeridas
-  const agregoImagenes = () => {
-    //Se agregara bajo las recomendaciones, una imagen de cada marca de lentes sugerida
-    //con enlace a su información
-    $("#recomendaciones").append($("<h3 class='subtitulo'>Hacer click en la lente para más información</h3>"));
-    $("#recomendaciones").append($("<div class='container' id='gridImagenes' style='display:none'></div>"));
-    $("#gridImagenes").append($("<tr class='row' id='fila1'></div>"));
-    //Modifico el array de graduaciones a mostrar, de acuerdo a la imagen
-    for (let i = 0; i < marcasAMostrarArr.length; i++){
-      switch (marcasAMostrarArr[i]){
-        case "Biofinity XR":
-          marcasAMostrarArr[i] = "biofinityxr";
-          break;
-        case "Proclear":
-          marcasAMostrarArr[i] = "proclearsph";
-          break;
-        case "Avaira":
-          marcasAMostrarArr[i] = "avaira";
-          break;
-        case "Biomedics":
-          marcasAMostrarArr[i] = "biomed";
-          break;
-        case "Biofinity":
-          marcasAMostrarArr[i] = "biofinity";
-          break;
-        case "Soflens59":
-          marcasAMostrarArr[i] = "soflens59";
-          break;
-        case "Air Optix":
-          marcasAMostrarArr[i] = "aohy";
-          break;        
-        case "":
-          marcasAMostrarArr.pop();
-          break;
-      }
-    }
-    console.table(marcasAMostrarArr);
-    
-    //Muestro la imagen de cada marca de lentes sugerida
-    for(let i = 0; i < marcasAMostrarArr.length; i++){
-        $("#gridImagenes").append($("<a href='https://imagineone.com.ar/producto/"+marcasAMostrarArr[i]+"/' target='_blank'><img id='"+marcasAMostrarArr[i]+"'src='../assets/images/lentes/"+marcasAMostrarArr[i]+".png' width=250rem></a>"));
-    }
-  }
-
-  //Agrego botones al final
-  const agregoBotonFinal = () => {
-    const botonVolverAEmpezar =document.createElement("button");
-    botonVolverAEmpezar.innerText="VOLVER A EMPEZAR";
-    botonVolverAEmpezar.className="main-button";
-    let divActual = document.getElementById("recomendaciones");
-    divActual.appendChild(botonVolverAEmpezar);
-    botonVolverAEmpezar.addEventListener("click", ()=> {
-      window.location.reload()
-    });
-  }
-
-  //Ejecuto las 3 funciones juntas
-  agregoElementoRecomendaciones();
-  agregoImagenes();
-  agregoBotonFinal();
-}
-
-//DECLARO FUNCION -- Llama a las funciones necesarias para calcular recomendacion
-const mostrarDatosAUtilizar = () => {
-
-  //Agrego elementos para mostrar datos
-  const agregoElementoRecetaNueva = () => {
-    const nuevoH3Resultado = document.createElement("h3");
-    const nuevoH4Resultado = document.createElement("h4");
-    const tituloRecetaAdaptada = document.createTextNode(`Se recomendarán lentes para la siguiente receta:`);
-    const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
-    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
-    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
-    $("#resultados").append(nuevoH3Resultado);
-    $("#resultados").append(nuevoH4Resultado);
-  }
-
-  const agregoBotonesFinal = () => {
-    const botonReiniciar =document.createElement("button");
-    botonReiniciar.innerText="REINICIAR";
-    botonReiniciar.className="main-button";
-    $("#resultados").append(botonReiniciar);
-    botonReiniciar.addEventListener("click", ()=> {
-      window.location.reload()
-    });
-
-    const botonConfirmar =document.createElement("button");
-    botonConfirmar.innerText="CONFIRMAR";
-    botonConfirmar.className="main-button";
-    $("#resultados").append(botonConfirmar);
-    botonConfirmar.addEventListener("click", ()=> {
-        //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
-        asignaGradEsfericaSugerida();
-
-        //LLAMO FUNCION -- Calculo lente sugerida para ambos ojos
-        recomendacionOD = sugerirLenteEsf(
-          recetaEsfSugerida.ojo1,
-          recetaEsfSugerida.esfOjo1,
-          recetaEsfSugerida.cilOjo1,
-          recetaEsfSugerida.ejeOjo1
-        );
-        recomendacionOI = sugerirLenteEsf(
-          recetaEsfSugerida.ojo2,
-          recetaEsfSugerida.esfOjo2,
-          recetaEsfSugerida.cilOjo2,
-          recetaEsfSugerida.ejeOjo2
-        );
-        
-        $("#resultados").slideUp(1000);
-
-        mostrarRecomendaciones();
-
-        //PRUEBAS CONSOLA
-        //console.table(graduacionesEsfericasDisponibles);
-        //console.table(recetaAdaptada);
-        //console.table(recetaEsfSugerida);    
-    });
-  }
-  
-  agregoElementoRecetaNueva();
-  agregoBotonesFinal();
-}
 
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
@@ -331,12 +197,144 @@ const sugerirMarca = (indice) => {
 
 };
 
-//Accion boton selector RECETA GUARDADA
-$("#botonRecetaGuardada").click((evt) => {
-  evt.preventDefault;
-  mostrarDatosAUtilizar();
-  $("#selectores").slideUp(1000);
-})
+
+//DECLARO FUNCION -- Muestro en HTML recomendaciones
+const mostrarRecomendaciones = () => {
+
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecomendaciones = () => {
+    const nuevoH3RecomendacionOD = document.createElement("h3");
+    const nuevoH3RecomendacionOI = document.createElement("h3");
+    const textoRecomendacionOD = document.createTextNode(recomendacionOD);
+    const textoRecomendacionOI = document.createTextNode(recomendacionOI);
+    nuevoH3RecomendacionOD.appendChild(textoRecomendacionOD);
+    nuevoH3RecomendacionOI.appendChild(textoRecomendacionOI);
+    $("#recomendaciones").hide()
+      .append(nuevoH3RecomendacionOD)
+      .append(nuevoH3RecomendacionOI)
+      .slideDown(1000, ()=>{
+        $("#gridImagenes").slideDown(1000);
+      });    
+  }
+
+  //Agrego imagenes de las lentes sugeridas
+  const agregoImagenes = () => {
+    //Se agregara bajo las recomendaciones, una imagen de cada marca de lentes sugerida
+    //con enlace a su información
+    $("#recomendaciones").append($("<h3 class='subtitulo'>Hacer click en la lente para más información</h3>"));
+    $("#recomendaciones").append($("<div class='container' id='gridImagenes' style='display:none'></div>"));
+    //Modifico el array de graduaciones a mostrar, de acuerdo a la imagen
+    for (let i = 0; i < marcasAMostrarArr.length; i++){
+      switch (marcasAMostrarArr[i]){
+        case "Biofinity XR":
+          marcasAMostrarArr[i] = "biofinityxr";
+          break;
+        case "Proclear":
+          marcasAMostrarArr[i] = "proclearsph";
+          break;
+        case "Avaira":
+          marcasAMostrarArr[i] = "avaira";
+          break;
+        case "Biomedics":
+          marcasAMostrarArr[i] = "biomed";
+          break;
+        case "Biofinity":
+          marcasAMostrarArr[i] = "biofinity";
+          break;
+        case "Soflens59":
+          marcasAMostrarArr[i] = "soflens59";
+          break;
+        case "Air Optix":
+          marcasAMostrarArr[i] = "aohy";
+          break;        
+        case "":
+          marcasAMostrarArr.pop();
+          break;
+      }
+    }
+    console.table(marcasAMostrarArr); //para prueba
+    
+    //Muestro la imagen de cada marca de lentes sugerida
+    //Con Link a su información
+    for(let i = 0; i < marcasAMostrarArr.length; i++){
+        $("#gridImagenes").append($("<a href='https://imagineone.com.ar/producto/"+marcasAMostrarArr[i]+"/' target='_blank'><img class='imagenesLentes' id='"+marcasAMostrarArr[i]+"'src='../assets/images/lentes/"+marcasAMostrarArr[i]+".png' width=250rem></a>"));
+    }
+  }
+
+  //Agrego botones al final
+  const agregoBotonFinal = () => {
+    const botonVolverAEmpezar =document.createElement("button");
+    botonVolverAEmpezar.innerText="VOLVER A EMPEZAR";
+    botonVolverAEmpezar.className="main-button";
+    let divActual = document.getElementById("recomendaciones");
+    divActual.appendChild(botonVolverAEmpezar);
+    botonVolverAEmpezar.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+  }
+
+  //Ejecuto las 3 funciones juntas
+  agregoElementoRecomendaciones();
+  agregoImagenes();
+  agregoBotonFinal();
+}
+
+//DECLARO FUNCION -- Llama a las funciones necesarias para calcular recomendacion
+const mostrarDatosAUtilizar = () => {
+
+  //Agrego elementos para mostrar datos
+  const agregoElementoRecetaNueva = () => {
+    const nuevoH3Resultado = document.createElement("h3");
+    const nuevoH4Resultado = document.createElement("h4");
+    const tituloRecetaAdaptada = document.createTextNode(`Se recomendarán lentes para la siguiente receta:`);
+    const datosRecetaAdaptada = document.createTextNode(`${recetaAdaptada.muestroDatos()}`);
+    nuevoH3Resultado.appendChild(tituloRecetaAdaptada);
+    nuevoH4Resultado.appendChild(datosRecetaAdaptada);
+    $("#resultados").append(nuevoH3Resultado);
+    $("#resultados").append(nuevoH4Resultado);
+  }
+
+  const agregoBotonesFinal = () => {
+    const botonReiniciar =document.createElement("button");
+    botonReiniciar.innerText="REINICIAR";
+    botonReiniciar.className="main-button";
+    $("#resultados").append(botonReiniciar);
+    botonReiniciar.addEventListener("click", ()=> {
+      window.location.reload()
+    });
+
+    const botonConfirmar =document.createElement("button");
+    botonConfirmar.innerText="CONFIRMAR";
+    botonConfirmar.className="main-button";
+    $("#resultados").append(botonConfirmar);
+    botonConfirmar.addEventListener("click", ()=> {
+        //LLAMO FUNCION -- Asignar graduación esferica a receta sugerida
+        asignaGradEsfericaSugerida();
+
+        //LLAMO FUNCION -- Calculo lente sugerida para ambos ojos
+        recomendacionOD = sugerirLenteEsf(
+          recetaEsfSugerida.ojo1,
+          recetaEsfSugerida.esfOjo1,
+          recetaEsfSugerida.cilOjo1,
+          recetaEsfSugerida.ejeOjo1
+        );
+        recomendacionOI = sugerirLenteEsf(
+          recetaEsfSugerida.ojo2,
+          recetaEsfSugerida.esfOjo2,
+          recetaEsfSugerida.cilOjo2,
+          recetaEsfSugerida.ejeOjo2
+        );
+        
+        $("#resultados").slideUp(1000);
+
+        mostrarRecomendaciones();  
+    });
+  }
+  
+  agregoElementoRecetaNueva();
+  agregoBotonesFinal();
+}
+
 
 
 //----------------

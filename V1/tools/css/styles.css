@@ -270,5 +270,8 @@ p {
 
 #tituloReceta{
   padding-left: 10px;
+}
 
+.imagenesLentes:hover{
+  opacity: 0.3;
 }

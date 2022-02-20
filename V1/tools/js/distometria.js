@@ -2,7 +2,8 @@
 let ojoACalcular = "ao";
 let distanciaVertice;
 
- //Creo instancias Receta Original y adaptada
+ //Creo instancias de rectas:
+ //Receta Original: Receta ingresada por el usuario
   const recetaOriginal = new Receta(
     "OD",
     null,
@@ -13,7 +14,7 @@ let distanciaVertice;
     null,
     null
   );
-  
+  //Receta Cerca: Receta con la distometría ya calculada  
   const recetaAdaptada = new Receta(
     "OD",
     null,
@@ -25,8 +26,8 @@ let distanciaVertice;
     null
   );
 
-//Contenidos Dinámicos
-//Selector de ojo, muestra ingreso de datos de acuerdo a lo seleccionado
+//CONTENIDOS DINAMICOS
+//Selector de ojo, muestra ingreso de datos de acuerdo al ojo seleccionado
 var botonOD = document.getElementById("botonOD");
 var botonOI = document.getElementById("botonOI");
 var botonAO = document.getElementById("botonAO");
@@ -56,7 +57,7 @@ botonAO.addEventListener("click", (event) => {
   ojoACalcular="ao";
 });
 
-//Capturo datos del formulario
+//CAPTURA DE DATOS DEL FORMULARIO
 let campoEsfOd = document.querySelector("#esfOd");
 let campoCilOd = document.querySelector("#cilOd");
 let campoEjeOd = document.querySelector("#ejeOd");
@@ -87,8 +88,7 @@ let mensajeErrorValidacion = document.querySelector("#subtextoValidacion");
 let formIngresoReceta = document.getElementById("ingresoReceta");
 
 //------INICIO VALIDACIONES EN CAMBIOS------
-//Validacion de campos GRADUACION
-//¿Hay forma de hacer esto una sola vez y aplicarlo a todos los campos del mismo tipo?
+//Validacion de campos GRADUACION en vivo, por cada ingreso realizado
 //campoEsfOd
 campoEsfOd.addEventListener("keyup", () => {
   if (campoEsfOd.value % 25 != 0 || campoEsfOd.value < -3000 || campoEsfOd.value > 3000){
@@ -214,7 +214,7 @@ const ingresoDatosReceta = () => {
 };
 
 //------VALIDACIONES EN ENVIO------
-//Validacion campos vacios
+//Al enviar los datos, no permitirá avanzar si algun campo activo está vacío
 const validoCamposVacios = () => {
   if (campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
       validVaciosOD = false;
@@ -225,6 +225,7 @@ const validoCamposVacios = () => {
 }
 
 //VALIDACION SEGUN OJO A COMPLETAR
+//Solo considerará los campos vacíos del ojo seleccionado
 const validacionSegunOjo = () => {
 //Valido que todos los campos del OD tengan datos correctos
 if (validEsfOD && validCilOD && validEjeOD) {
@@ -259,6 +260,7 @@ if (validDistVertice == false) {
   mensajeErrorValidacion.innerHTML="&#9888 Hay datos incorrectos &#9888";
 }
 
+//En caso de que los campos esten OK, continúa y ejecuta las funciones
 if (
   ((ojoACalcular == "od") && validOD && validVaciosOD)
   ||
@@ -267,6 +269,7 @@ if (
   ((ojoACalcular == "ao") && validOD && validVaciosOD && validOI && validVaciosOI)) {
     if (validDistVertice){
       mensajeErrorValidacion.innerHTML="";
+      //Si todo está OK, continúa con el cálculo
       ingresoDatosReceta();
       $("#ingresoReceta").slideUp(1000);
       runDistometria();
@@ -274,8 +277,6 @@ if (
     } 
 }
 }
-
-
 
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
@@ -336,10 +337,10 @@ const distometria = () => {
     recetaAdaptada.ejeOjo2 = recetaOriginal.ejeOjo2;
   }
   
-  //Almaceno en local storage las recetas
-  localStorage.setItem("recetaOriginal", JSON.stringify(recetaOriginal));
-  localStorage.setItem("recetaAdaptada", JSON.stringify(recetaAdaptada));
-  localStorage.setItem("ojoACalcular", ojoACalcular);
+  //Almaceno en local storage los datos trabajados
+  localStorage.setItem("DISTrecetaOriginal", JSON.stringify(recetaOriginal));
+  localStorage.setItem("DISTrecetaAdaptada", JSON.stringify(recetaAdaptada));
+  localStorage.setItem("DISTojoACalcular", ojoACalcular);
 };
 
 

@@ -1,13 +1,10 @@
 //Declaro Variables globales
 let ojoACalcular = "ao";
 
-//VER COMO OBTENER EL VALOR DEL MENU SELECT
-$("#adicionSelect").on("change", ()=> {
-  console.log($("#adicionSelect").val());
-});
 
- //Creo instancias Receta Original y adaptada
-  const recetaOriginal = new Receta(
+ //Creo instancias de rectas:
+ //Receta Original: Receta ingresada por el usuario
+  const recetaLejos = new Receta(
     "OD",
     null,
     null,
@@ -17,7 +14,7 @@ $("#adicionSelect").on("change", ()=> {
     null,
     null
   );
-  
+  //Receta Cerca: Receta con la adición ya sumada
   const recetaCerca = new Receta(
     "OD",
     null,
@@ -29,14 +26,18 @@ $("#adicionSelect").on("change", ()=> {
     null
   );
 
+
 //Cambia metodo de calculo segun el switch
+//Por defecto, solicitará RECETA LEJOS y ADICION y calculará RECETA CERCA
 let calcularAdicion = false;
 $(".graduacionCerca").hide();
+//Al activar el switch, esconde el select ADICION y muestra los campos de RECETA CERCA
 $("#calculaAdd").on("change", ()=> {
   if (calcularAdicion == false){
     calcularAdicion = true;
     $("#adicion").slideUp(500);
     $(".graduacionCerca").slideDown(500);
+//Con el switch desactivado, muestra el select ADICION y esconde los campos RECETA CERCA
   } else if (calcularAdicion == true){
     calcularAdicion = false;
     $("#adicion").slideDown(500);
@@ -46,7 +47,7 @@ $("#calculaAdd").on("change", ()=> {
 
 
 //CONTENIDOS DINAMICOS
-//Selector de ojo, muestra ingreso de datos de acuerdo a lo seleccionado
+//Selector de ojo, muestra ingreso de datos de acuerdo al ojo seleccionado
 var botonOD = document.getElementById("botonOD");
 var botonOI = document.getElementById("botonOI");
 var botonAO = document.getElementById("botonAO");
@@ -76,7 +77,7 @@ botonAO.addEventListener("click", (event) => {
   ojoACalcular="ao";
 });
 
-//Capturo datos del formulario
+//CAPTURA DE DATOS DEL FORMULARIO
 let campoEsfOd = document.querySelector("#esfOd");
 let campoEsfOdCerca = document.querySelector("#esfOdCerca");
 let campoCilOd = document.querySelector("#cilOd");
@@ -113,8 +114,7 @@ let mensajeErrorValidacion = document.querySelector("#subtextoValidacion");
 let formIngresoReceta = document.getElementById("ingresoReceta");
 
 //------INICIO VALIDACIONES EN CAMBIOS------
-//Validacion de campos GRADUACION
-//¿Hay forma de hacer esto una sola vez y aplicarlo a todos los campos del mismo tipo?
+//Validacion de campos GRADUACION en vivo, por cada ingreso realizado
 //campoEsfOd
 campoEsfOd.addEventListener("keyup", () => {
   if (campoEsfOd.value % 25 != 0 || campoEsfOd.value < -3000 || campoEsfOd.value > 3000){
@@ -243,19 +243,19 @@ campoEjeOi.addEventListener("keyup", () => {
 //El usuario ingresará los datos de la receta de anteojos con la que cuenta
 const ingresoDatosReceta = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
-    recetaOriginal.esfOjo1 = Number(campoEsfOd.value)/100;
-    recetaOriginal.cilOjo1 = Number(campoCilOd.value)/100;
-    recetaOriginal.ejeOjo1 = Number(campoEjeOd.value);
+    recetaLejos.esfOjo1 = Number(campoEsfOd.value)/100;
+    recetaLejos.cilOjo1 = Number(campoCilOd.value)/100;
+    recetaLejos.ejeOjo1 = Number(campoEjeOd.value);
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-    recetaOriginal.esfOjo2 = Number(campoEsfOi.value)/100;
-    recetaOriginal.cilOjo2 = Number(campoCilOi.value)/100;
-    recetaOriginal.ejeOjo2 = Number(campoEjeOi.value);
+    recetaLejos.esfOjo2 = Number(campoEsfOi.value)/100;
+    recetaLejos.cilOjo2 = Number(campoCilOi.value)/100;
+    recetaLejos.ejeOjo2 = Number(campoEjeOi.value);
   }
 };
 
 //------VALIDACIONES EN ENVIO------
-//Validacion campos vacios
+//Al enviar los datos, no permitirá avanzar si algun campo activo está vacío
 const validoCamposVacios = () => {
   if (campoEsfOdCerca.value == "" || campoEsfOd.value == "" || campoCilOd.value == "" || campoEjeOd.value == ""){
       validVaciosOD = false;
@@ -266,6 +266,7 @@ const validoCamposVacios = () => {
 }
 
 //VALIDACION SEGUN OJO A COMPLETAR
+//Solo considerará los campos vacíos del ojo seleccionado
 const validacionSegunOjo = (funcionAEjecutar) => {
 //Valido que todos los campos del OD tengan datos correctos
 if (validEsfODCerca && validEsfOD && validCilOD && validEjeOD) {
@@ -294,7 +295,7 @@ if (ojoACalcular == "oi" || ojoACalcular == "ao"){
   }
 }
 
-
+//En caso de que los campos esten OK, continúa y ejecuta las funciones
 if (
   ((ojoACalcular == "od") && validOD && validVaciosOD)
   ||
@@ -305,6 +306,7 @@ if (
       mensajeErrorValidacion.innerHTML="";
       ingresoDatosReceta();
       $("#ingresoReceta").slideUp(1000);
+      //La función a la que se llamará, dependerá del parámetro recibido
       if (funcionAEjecutar == "RecetaCerca"){
         runCalcularRecetaCerca();
       } else if (funcionAEjecutar == "Adicion"){
@@ -313,7 +315,6 @@ if (
     } 
 }
 }
-
 
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
 //Funcion para redondear los resultados obtenidos a cuartos (multiplos de 0.25)
@@ -324,6 +325,7 @@ const redondearACuartos = (num) => {
 };
 
 /*DECLARO FUNCION -- Calcular Receta Cerca
+Función que se calculará cuando el switch esté OFF
 Nuevo ESF: Esferico original + Adicion
 Nuevo CIL: Cilindrico original
 Nuevo EJE: Eje original
@@ -332,34 +334,34 @@ const calcularRecetaCerca = () => {
   if (ojoACalcular == "od" || ojoACalcular == "ao") {
     recetaCerca.esfOjo1 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.esfOjo1) +
+        (parseFloat(recetaLejos.esfOjo1) +
               parseFloat($("#adicionSelect").val())) *
           100
       ) / 100
     );
     recetaCerca.cilOjo1 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo1)) *
+        (parseFloat(recetaLejos.cilOjo1)) *
           100
       ) / 100
     );
-    recetaCerca.ejeOjo1 = recetaOriginal.ejeOjo1;
+    recetaCerca.ejeOjo1 = recetaLejos.ejeOjo1;
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
     recetaCerca.esfOjo2 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.esfOjo2) +
+        (parseFloat(recetaLejos.esfOjo2) +
               parseFloat($("#adicionSelect").val())) *
           100
       ) / 100
     );
     recetaCerca.cilOjo2 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo2)) *
+        (parseFloat(recetaLejos.cilOjo2)) *
           100
       ) / 100
     );
-    recetaCerca.ejeOjo2 = recetaOriginal.ejeOjo2;
+    recetaCerca.ejeOjo2 = recetaLejos.ejeOjo2;
   }
 };
 
@@ -375,7 +377,7 @@ const runCalcularRecetaCerca = () => {
     const nuevoH3 = document.createElement("h3");
     const nuevoH4 = document.createElement("h4");
     const tituloRecetaOriginal = document.createTextNode(`La receta original ingresada es:\n`);
-    const datosRecetaOriginal = document.createTextNode(`${recetaOriginal.muestroDatos()}`);
+    const datosRecetaOriginal = document.createTextNode(`${recetaLejos.muestroDatos()}`);
     nuevoH3.appendChild(tituloRecetaOriginal);
     nuevoH4.appendChild(datosRecetaOriginal);
     let divActual = document.getElementById("resultados");
@@ -422,6 +424,7 @@ const runCalcularRecetaCerca = () => {
 
 
 /*DECLARO FUNCION -- Calcular Adicion
+Función que se calculará cuando el switch esté ON
 Adicion: Esferico Cerca - Esferico Lejos
 */
 const calcularAdicionSobreRecetas = () => {
@@ -434,11 +437,11 @@ const calcularAdicionSobreRecetas = () => {
     );
     recetaCerca.cilOjo1 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo1)) *
+        (parseFloat(recetaLejos.cilOjo1)) *
           100
       ) / 100
     );
-    recetaCerca.ejeOjo1 = recetaOriginal.ejeOjo1;
+    recetaCerca.ejeOjo1 = recetaLejos.ejeOjo1;
   }
   if (ojoACalcular == "oi" || ojoACalcular == "ao") {
     recetaCerca.esfOjo2 = redondearACuartos(
@@ -449,14 +452,13 @@ const calcularAdicionSobreRecetas = () => {
     );
     recetaCerca.cilOjo2 = redondearACuartos(
       Math.round(
-        (parseFloat(recetaOriginal.cilOjo2)) *
+        (parseFloat(recetaLejos.cilOjo2)) *
           100
       ) / 100
     );
-    recetaCerca.ejeOjo2 = recetaOriginal.ejeOjo2;
+    recetaCerca.ejeOjo2 = recetaLejos.ejeOjo2;
   }
 };
-
 
 //DECLARO FUNCION -- Llama a las funciones necesarias para calcular ADICION
 const runcalcularAdicionSobreRecetas = () => {
@@ -469,7 +471,7 @@ const runcalcularAdicionSobreRecetas = () => {
     const nuevoH3 = document.createElement("h3");
     const nuevoH4 = document.createElement("h4");
     const tituloRecetaOriginal = document.createTextNode(`La receta original ingresada es:\n`);
-    const datosRecetaOriginal = document.createTextNode(`${recetaOriginal.muestroDatos()}`);
+    const datosRecetaOriginal = document.createTextNode(`${recetaLejos.muestroDatos()}`);
     nuevoH3.appendChild(tituloRecetaOriginal);
     nuevoH4.appendChild(datosRecetaOriginal);
     let divActual = document.getElementById("resultados");
@@ -492,8 +494,8 @@ const runcalcularAdicionSobreRecetas = () => {
   const agregoElementoVerAdicion = () => {
     const nuevoH3ResultadoOd = document.createElement("h3");
     const nuevoH3ResultadoOi = document.createElement("h3");
-    const tituloAddOd = document.createTextNode(`La ADICIÓN para el OD es: ${recetaOriginal.addSign((recetaCerca.esfOjo1-recetaOriginal.esfOjo1).toFixed(2))}`);
-    const tituloAddOi = document.createTextNode(`La ADICIÓN para el OI es: ${recetaOriginal.addSign((recetaCerca.esfOjo2-recetaOriginal.esfOjo2).toFixed(2))}`);
+    const tituloAddOd = document.createTextNode(`La ADICIÓN para el OD es: ${recetaLejos.addSign((recetaCerca.esfOjo1-recetaLejos.esfOjo1).toFixed(2))}`);
+    const tituloAddOi = document.createTextNode(`La ADICIÓN para el OI es: ${recetaLejos.addSign((recetaCerca.esfOjo2-recetaLejos.esfOjo2).toFixed(2))}`);
     nuevoH3ResultadoOd.appendChild(tituloAddOd);
     nuevoH3ResultadoOi.appendChild(tituloAddOi);
     let divActual = document.getElementById("resultados");
@@ -528,9 +530,11 @@ const runcalcularAdicionSobreRecetas = () => {
 }
 
 //Accion boton PROCESAR
+//La acción del botón dependerá de lo que se va a calcular, de acuerdo
+//a lo seleccionado en el switch
 botonProcesar.addEventListener("click", (event) => {
   if (calcularAdicion == false){
-    //Ver lo que tiene que hacer al clickear en PROCESAR
+    //Ejecutará esto si el switch está OFF (Calculará receta CERCA)
     event.preventDefault();
     campoEsfOdCerca = "000";
     campoEsfOiCerca = "000";
@@ -539,6 +543,7 @@ botonProcesar.addEventListener("click", (event) => {
     validoCamposVacios();
     validacionSegunOjo("RecetaCerca");  
   } else if (calcularAdicion == true) {
+    //Ejecutará esto si el switch está ON (Calculará ADICIÓN)
     event.preventDefault();
     validoCamposVacios();
     validacionSegunOjo("Adicion");
@@ -547,3 +552,4 @@ botonProcesar.addEventListener("click", (event) => {
 
 //VER PRESENTACION DE LOS DATOS
 //VER VALIDACIONES (AGREGAR O CONTROLAR)
+//VER TAMAÑO DE VENTANA
