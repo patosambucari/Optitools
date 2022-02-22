@@ -5,6 +5,7 @@ let graduacionesEsfericasDisponibles;
 let marcasEncontradas ="";
 let marcasEncontradasArr = [];
 let marcasAMostrarArr = [];
+let marcasCodigoArr = [];
 
 //Obtengo graduaciones ESFERICAS disponibles de archivo JSON
 //Accedo con AJAX a JSON local
@@ -131,27 +132,27 @@ const asignaGradEsfericaSugerida = () => {
 
 //DECLARO FUNCION -- Muestro por pantalla la graduación y marca sugerida para la lente
 const sugerirLenteEsf = (ojo, esf, cil, eje) => {
-  console.table(recetaAdaptada);
+  console.table(recetaEsfSugerida);
   if (esf !== null) {
     //Si la graduación sugerida es mayor a 15.00 o menor a -20.00, no hay graduaciones disponibles
     if (esf > 15.0 || esf < -20.0) {
       return(
-        `La graduación recomendada para el ${ojo} es ${esf.toFixed(
+        `${ojo}: La graduación recomendada es ${esf.toFixed(
           2
         )} ${cil.toFixed(
           2
-        )} x ${eje}º. \nNo hay lentes esféricas disponibles para esta graduación.`
+        )} x ${eje}º.\n`+`No hay lentes esféricas disponibles para esta graduación.`
       );
     } else {
       return(
-        `Lente recomendada para el ${ojo}:\n ${sugerirMarca(
+        `${ojo}: Lente recomendada:\n`+`${sugerirMarca(
           buscaEsfSugeridoEntreDisponibles(esf)
         )}`
       );
     }
   } else if (cil !== null) {
       return(
-        `Debido al alto poder cilindrico, no se recomiendan lentes esféricas para el ${ojo}.\nSe sugiere adaptar lentes tóricas`
+        `${ojo}: Debido al alto poder cilindrico, no se recomiendan lentes esféricas.\n`+`Se sugiere adaptar lentes tóricas.`
       );
   } else return "";
 };
@@ -185,6 +186,8 @@ const sugerirMarca = (indice) => {
   marcasEncontradasArr = marcasEncontradas.split(", ");
   //Elimino marcas duplicadas
   marcasAMostrarArr =[...new Set(marcasEncontradasArr)];
+  //Copio array de marcas a mostrar a array de codigos de marcas
+  marcasCodigoArr = [].concat(marcasAMostrarArr);
 
   //Devuelvo texto a mostrar
   return `${recetaEsfSugerida.addSign(graduacionesEsfericasDisponibles[indice].esf.toFixed(
@@ -194,7 +197,6 @@ const sugerirMarca = (indice) => {
   }º \nMarcas disponibles: ${
     graduacionesEsfericasDisponibles[indice].marcasDisponibles
   }`;
-
 };
 
 
@@ -223,41 +225,54 @@ const mostrarRecomendaciones = () => {
     //con enlace a su información
     $("#recomendaciones").append($("<h3 class='subtitulo'>Hacer click en la lente para más información</h3>"));
     $("#recomendaciones").append($("<div class='container' id='gridImagenes' style='display:none'></div>"));
-    //Modifico el array de graduaciones a mostrar, de acuerdo a la imagen
-    for (let i = 0; i < marcasAMostrarArr.length; i++){
-      switch (marcasAMostrarArr[i]){
+ 
+    //Modifico array de marcas, ingresando su codigo
+    for (let i = 0; i < marcasCodigoArr.length; i++){
+      switch (marcasCodigoArr[i]){
         case "Biofinity XR":
-          marcasAMostrarArr[i] = "biofinityxr";
+          marcasCodigoArr[i] = "biofinityxr";
           break;
         case "Proclear":
-          marcasAMostrarArr[i] = "proclearsph";
+          marcasCodigoArr[i] = "proclearsph";
           break;
         case "Avaira":
-          marcasAMostrarArr[i] = "avaira";
+          marcasCodigoArr[i] = "avaira";
           break;
         case "Biomedics":
-          marcasAMostrarArr[i] = "biomed";
+          marcasCodigoArr[i] = "biomed";
           break;
         case "Biofinity":
-          marcasAMostrarArr[i] = "biofinity";
+          marcasCodigoArr[i] = "biofinity";
           break;
         case "Soflens59":
-          marcasAMostrarArr[i] = "soflens59";
+          marcasCodigoArr[i] = "soflens59";
           break;
         case "Air Optix":
-          marcasAMostrarArr[i] = "aohy";
+          marcasCodigoArr[i] = "aohy";
           break;        
         case "":
-          marcasAMostrarArr.pop();
+          marcasCodigoArr.pop();
           break;
       }
     }
-    console.table(marcasAMostrarArr); //para prueba
     
     //Muestro la imagen de cada marca de lentes sugerida
-    //Con Link a su información
-    for(let i = 0; i < marcasAMostrarArr.length; i++){
-        $("#gridImagenes").append($("<a href='https://imagineone.com.ar/producto/"+marcasAMostrarArr[i]+"/' target='_blank'><img class='imagenesLentes' id='"+marcasAMostrarArr[i]+"'src='../assets/images/lentes/"+marcasAMostrarArr[i]+".png' width=250rem></a>"));
+    for(let i = 0; i < marcasCodigoArr.length; i++){
+      $("#gridImagenes").append('<div class="cell" id="celda'+i+'"></div>');
+      $("#"+"celda"+i).append("<img class='imagenesLentes' id='"+marcasCodigoArr[i]+"'src='../assets/images/lentes/"+marcasCodigoArr[i]+".png' width=250rem></a>");
+      $("#"+"celda"+i).append('<button id="infoCelda'+i+'" class="main-button info-button" style="opacity: 0">+Info</button>');
+      //Agrego un botón superpuesto a la imagen con link a la info del producto
+      $("#infoCelda"+i).on("click", ()=>{
+        window.open("https://imagineone.com.ar/producto/"+marcasCodigoArr[i]+"/", "_blank"); 
+      })
+      $("#"+"celda"+i).hover(()=>{
+        $("#"+marcasCodigoArr[i]).fadeTo(500, "0.5");
+        $("#infoCelda"+i).fadeTo(500, "1");
+      },
+      ()=>{
+        $("#"+marcasCodigoArr[i]).fadeTo(500, "1");
+          $("#infoCelda"+i).fadeTo(500, "0");
+      })
     }
   }
 
@@ -325,22 +340,14 @@ const mostrarDatosAUtilizar = () => {
           recetaEsfSugerida.ejeOjo2
         );
         
+        //Oculto div resultados
         $("#resultados").slideUp(1000);
-
+        
+        //Ejecuto Funciones
         mostrarRecomendaciones();  
     });
   }
-  
+  //Ejecuto Funciones
   agregoElementoRecetaNueva();
   agregoBotonesFinal();
 }
-
-
-
-//----------------
-//AGREGAR A FUTURO:
-//Ingreso de nuevas recetas
-//Mejorar visualización de resultados
-//Agregar boton para enviar pedido
-//----------------
-

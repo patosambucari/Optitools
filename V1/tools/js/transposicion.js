@@ -237,7 +237,7 @@ if (ojoACalcular == "oi" || ojoACalcular == "ao"){
   }
 }
 
-
+//Valido que no haya campos vacios
 if (
   ((ojoACalcular == "od") && validOD && validVaciosOD)
   ||
@@ -362,6 +362,7 @@ const runTransposicion = () => {
 
   }
 
+  //Ejecuto Funciones
   agregoElementoRecetaOriginal();
   agregoElementoRecetaInvertida();
   agregoBotonesFinal();

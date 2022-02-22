@@ -193,13 +193,22 @@ p {
   margin-left: 10px;
 }
 
-.container{
-  margin-top: 20px;
-  width: 100%;
-  align-items: center;
+.container {
+  display: flex;
+  flex-flow: row wrap;
 }
+.cell {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.info-button {
+  top: 40px;
+  left: 63px;
+  position: absolute;
+}
+
 .row>.col{
-    padding: 5px;
     border: 1px solid black;
     text-align: center;
     border-collapse: collapse;
@@ -270,8 +279,4 @@ p {
 
 #tituloReceta{
   padding-left: 10px;
-}
-
-.imagenesLentes:hover{
-  opacity: 0.3;
 }
