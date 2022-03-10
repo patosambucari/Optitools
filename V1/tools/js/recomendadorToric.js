@@ -170,20 +170,20 @@ const sugerirLenteTor = (ojo, esf, cil, eje) => {
     //Si el cilindrico es menor a 0.75, se sugiere adaptar lentes esfericas
     if (Math.abs(cil) < 0.75) {
       return(
-        `${ojo}: La graduación recomendada es ${esf.toFixed(
+        `${ojo}: La graduación recomendada es ${recetaSugerida.addSign(esf.toFixed(
           2
-        )} ${cil.toFixed(
+        ))} ${recetaSugerida.addSign(cil.toFixed(
           2
-        )} x ${eje}º.\n`+`Se sugiere adaptar lentes esféricas.`
+        ))} x ${eje}º.\n`+`Se sugiere adaptar lentes esféricas.`
       );
     //Si el cilindrico es mayor a 6.00, no hay lentes descartables disponibles
     } else if (Math.abs(cil) > 6.00) {
       return(
-        `${ojo}: La graduación recomendada es ${esf.toFixed(
+        `${ojo}: La graduación recomendada es ${recetaSugerida.addSign(esf.toFixed(
           2
-        )} ${cil.toFixed(
+        ))} ${recetaSugerida.addSign(cil.toFixed(
           2
-        )} x ${eje}º.\n`+`No hay lentes tóricas descartables disponibles para esta graduación.`
+        ))} x ${eje}º.\n`+`No hay lentes tóricas descartables disponibles para esta graduación.`
       );
     } else {
       return(
@@ -230,9 +230,8 @@ const sugerirMarca = (indice) => {
   //Devuelvo texto a mostrar
   return `${recetaSugerida.addSign(graduacionesToricasDisponibles[indice].esf.toFixed(
     2
-  ))} ${recetaSugerida.addSign(graduacionesToricasDisponibles[indice].cil.toFixed(2))} x ${
-    graduacionesToricasDisponibles[indice].eje
-  }º \nMarcas disponibles: ${
+  ))} ${recetaSugerida.addSign(graduacionesToricasDisponibles[indice].cil.toFixed(2))}.
+  \nMarcas disponibles: ${
     graduacionesToricasDisponibles[indice].marcasDisponibles
   }`;
 };
@@ -391,6 +390,3 @@ const mostrarDatosAUtilizar = () => {
   agregoElementoRecetaNueva();
   agregoBotonesFinal();
 }
-
-//VER EJES DE LENTES RECOMENDADAS
-//NO FUNCIONA ADDSIGN
