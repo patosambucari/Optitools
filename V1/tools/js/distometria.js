@@ -406,5 +406,3 @@ botonProcesar.addEventListener("click", (event) => {
   validoCamposVacios();
   validacionSegunOjo();  
 });
-
-//VER QUE ESTE CORRECTO EL CALCULO DE LA DISTOMETRIA

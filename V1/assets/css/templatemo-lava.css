@@ -829,7 +829,8 @@ promotion
 
 #promotion .right-text ul li {
   display: inline-block;
-  margin-bottom: 60px;
+  margin-top: 75px;
+  margin-bottom: 20px;
 }
 
 #promotion .right-text ul li:last-child {

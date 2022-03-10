@@ -254,7 +254,6 @@ if (
 }
 }
 
-
 //DECLARO FUNCION -- Redondear a cuartos (las graduaciones van de 0.25 en 0.25)
 //Funcion para redondear los resultados obtenidos a cuartos (multiplos de 0.25)
 const redondearACuartos = (num) => {
@@ -263,60 +262,11 @@ const redondearACuartos = (num) => {
   return num;
 };
 
-/*DECLARO FUNCION -- Calcular Transposición
-Nuevo ESF: Esferico original + Cilindrico original
-Nuevo CIL: Cilindrico original * -1
-Nuevo EJE: Eje original +/- 90º
-*/
-const transposicion = () => {
-  if (ojoACalcular == "od" || ojoACalcular == "ao") {
-    recetaInvertida.esfOjo1 = redondearACuartos(
-      Math.round(
-        (parseFloat(recetaOriginal.esfOjo1) +
-              parseFloat(recetaOriginal.cilOjo1)) *
-          100
-      ) / 100
-    );
-    recetaInvertida.cilOjo1 = redondearACuartos(
-      Math.round(
-        -(parseFloat(recetaOriginal.cilOjo1)) *
-          100
-      ) / 100
-    );
-    if (recetaOriginal.ejeOjo1 <= 90) { 
-        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 + 90;
-      } else if (recetaOriginal.ejeOjo1 > 90) {
-        recetaInvertida.ejeOjo1 = recetaOriginal.ejeOjo1 - 90;
-      }
-  }
-  if (ojoACalcular == "oi" || ojoACalcular == "ao") {
-    recetaInvertida.esfOjo2 = redondearACuartos(
-      Math.round(
-        (parseFloat(recetaOriginal.esfOjo2) +
-              parseFloat(recetaOriginal.cilOjo2)) *
-          100
-      ) / 100
-    );
-    recetaInvertida.cilOjo2 = redondearACuartos(
-      Math.round(
-        -(parseFloat(recetaOriginal.cilOjo2)) *
-          100
-      ) / 100
-    );
-    if (recetaOriginal.ejeOjo2 <= 90) { 
-        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 + 90;
-      } else if (recetaOriginal.ejeOjo2 > 90) {
-        recetaInvertida.ejeOjo2 = recetaOriginal.ejeOjo2 - 90;
-      }
-    }
-};
-
-
 //DECLARO FUNCION -- Llama a las funciones necesarias para ejecutar
 const runTransposicion = () => {
   
   //Calculo transposición sobre receta original
-  transposicion();
+  recetaOriginal.transposicion();
 
   //Agrego elementos para mostrar datos
   const agregoElementoRecetaOriginal = () => {

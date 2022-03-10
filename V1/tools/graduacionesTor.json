@@ -1,0 +1,2659 @@
+[
+  { "esf": -20, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -19.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -19, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -18.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -18, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -17.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -17, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -16.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -16, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -15.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -15, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -14.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -14, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -13.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -13, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -12.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -12, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -11.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -11, "cil": -0.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -10.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  {
+    "esf": -10,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.25,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 5.75,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 6.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7.5,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 8,
+    "cil": -0.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  { "esf": -20, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -19.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -19, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -18.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -18, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -17.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -17, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -16.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -16, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -15.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -15, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -14.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -14, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -13.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -13, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -12.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -12, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -11.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -11, "cil": -1.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -10.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  {
+    "esf": -10,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.25,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 5.75,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 6.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7.5,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 8,
+    "cil": -1.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  { "esf": -20, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -19.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -19, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -18.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -18, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -17.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -17, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -16.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -16, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -15.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -15, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -14.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -14, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -13.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -13, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -12.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -12, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -11.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -11, "cil": -1.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -10.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  {
+    "esf": -10,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.25,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 5.75,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 6.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7.5,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 8,
+    "cil": -1.75,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  { "esf": -20, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -19.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -19, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -18.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -18, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -17.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -17, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -16.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -16, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -15.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -15, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -14.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -14, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -13.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -13, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -12.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -12, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -11.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -11, "cil": -2.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -10.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  {
+    "esf": -10,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": -9,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -8,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -7,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -6,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -4,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -3,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -2,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -1,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": -0.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 0.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 1.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 2.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 3.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.25,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 4.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, Soflens Toric, One Day Toric"
+  },
+  {
+    "esf": 5.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 5.75,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric, Biomedics Toric, One Day Toric"
+  },
+  {
+    "esf": 6,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 6.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 7.5,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  {
+    "esf": 8,
+    "cil": -2.25,
+    "eje": 0,
+    "marcasDisponibles": "Air Optix Toric, Avaira Toric, Biofinity Toric"
+  },
+  { "esf": -10, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -6,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -5.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -5.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -5.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -4.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -4.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -4.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -4,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -3.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -3.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -3.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -3,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -2.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -2.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -2.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -2,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -1.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -1.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -1.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -1,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -0.75,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -0.5,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": -0.25,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  {
+    "esf": 0,
+    "cil": -2.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO, Soflens Toric"
+  },
+  { "esf": 0.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -2.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -3.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -3.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -3.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -3.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -4.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -4.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -4.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -4.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -5.25,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -5.25, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -10, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -9, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -8, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -7, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": -6, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -5.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -4.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -4, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -3.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -3, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -2.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -2, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -1.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -1, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.75,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": -0.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  {
+    "esf": -0.25,
+    "cil": -5.75,
+    "eje": 0,
+    "marcasDisponibles": "Biofinity MTO"
+  },
+  { "esf": 0, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 0.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 1.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 2.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 3.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 4.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.25, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 5.75, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 6.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 7.5, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" },
+  { "esf": 8, "cil": -5.75, "eje": 0, "marcasDisponibles": "Biofinity MTO" }
+]

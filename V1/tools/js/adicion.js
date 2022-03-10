@@ -549,7 +549,3 @@ botonProcesar.addEventListener("click", (event) => {
     validacionSegunOjo("Adicion");
   }
 });
-
-//VER PRESENTACION DE LOS DATOS
-//VER VALIDACIONES (AGREGAR O CONTROLAR)
-//VER TAMAÑO DE VENTANA

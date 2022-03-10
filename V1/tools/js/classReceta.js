@@ -28,6 +28,54 @@ class Receta {
       } else return power;
     }
 
+    /*Metodo para Calcular Transposición
+    Nuevo ESF: Esferico original + Cilindrico original
+    Nuevo CIL: Cilindrico original * -1
+    Nuevo EJE: Eje original +/- 90º
+    */
+      transposicion = () => {
+      if (ojoACalcular == "od" || ojoACalcular == "ao") {
+        recetaInvertida.esfOjo1 = redondearACuartos(
+          Math.round(
+            (parseFloat(this.esfOjo1) +
+                  parseFloat(this.cilOjo1)) *
+              100
+          ) / 100
+        );
+        recetaInvertida.cilOjo1 = redondearACuartos(
+          Math.round(
+            -(parseFloat(this.cilOjo1)) *
+              100
+          ) / 100
+        );
+        if (this.ejeOjo1 <= 90) { 
+            recetaInvertida.ejeOjo1 = this.ejeOjo1 + 90;
+          } else if (this.ejeOjo1 > 90) {
+            recetaInvertida.ejeOjo1 = this.ejeOjo1 - 90;
+          }
+      }
+      if (ojoACalcular == "oi" || ojoACalcular == "ao") {
+        recetaInvertida.esfOjo2 = redondearACuartos(
+          Math.round(
+            (parseFloat(this.esfOjo2) +
+                  parseFloat(this.cilOjo2)) *
+              100
+          ) / 100
+        );
+        recetaInvertida.cilOjo2 = redondearACuartos(
+          Math.round(
+            -(parseFloat(this.cilOjo2)) *
+              100
+          ) / 100
+        );
+        if (this.ejeOjo2 <= 90) { 
+            recetaInvertida.ejeOjo2 = this.ejeOjo2 + 90;
+          } else if (this.ejeOjo2 > 90) {
+            recetaInvertida.ejeOjo2 = this.ejeOjo2 - 90;
+          }
+        }
+    };
+
     //Metodo para mostrar los datos de las recetas
     //Solo mostrará los ojos calculados, y ajustará todo a 2 decimales
     //Tambien fuerza agregar el signo + en caso de ser graduaciones positivas
